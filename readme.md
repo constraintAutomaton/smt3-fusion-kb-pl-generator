@@ -43,11 +43,16 @@ $$
 D_{s_{in} = s_{empty}} = \{D|s_{w,in}=s_{empty} \}
 $$.
 
+In the following lines, we define concretely $f_d$.
+From the race mapping, we get the race $r_k$ of the $d_k$, then
+we calculate the average level $lv_{avg}$ of the input demon.
+Finally, we find the demon of a race $r_k$ with the lowest level where its base level is greater or equal to $lv_{avg}$.
+More formally,   
 $$
 r_k = F_R(r_{i},r_{j}) \\
 lv_{avg} = \frac{lv_{i} + lv_{j}}{2} \\
-Dp = \{d_k \in D_{s_i = s_{empty}} |  lv_k  \geq lv_{avg} \} \\
 
+Dp = \{d_w \in D_{s_{in} = s_{empty}} |  r_w = r_k \land lv_w  \geq lv_{avg} \} \\
 ifd = \arg \min{\{ lv_{p} \in d_p \in Dp \}} \\
 
 f_d = Dp_{ifd}
