@@ -24,7 +24,7 @@ We wish to fuse demons to get a specific demon $d_o$ by minimizing the number of
 
 ## Rules
 
-## Normal fusion
+### Normal fusion
 A normal fusion 
 $$f_d: (D, D) \to D $$
 
