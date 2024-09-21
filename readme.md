@@ -14,7 +14,7 @@ The condition can also related on what what happen when the demon is fused $s_o$
 A demon is defined by the tuple
 
 $$
-d := (r \in R,n, lv\in \mathbb{R}_{>0}, s_{in} \in S_{in}, s_{out} \in S_{out}  )
+d := \{r \in R,n, lv\in \mathbb{R}_{>0}, s_{in} \in S_{in}, s_{out} \in S_{out}  \}
 $$
 
 ## Problem
