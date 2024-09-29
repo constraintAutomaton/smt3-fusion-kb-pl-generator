@@ -1,5 +1,9 @@
 # smt-nocturne-fusion-planner
 
+## Dependencies
+- [Z3](https://github.com/Z3Prover/z3)
+- [Rust 2021](https://www.rust-lang.org/)
+
 ## Model
 
 ## Premilinaries
