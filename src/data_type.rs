@@ -1,6 +1,7 @@
+use derive_getters::Getters;
 use std::fmt::Display;
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Getters)]
 pub struct Demon {
     name: String,
     race: Race,
@@ -8,11 +9,32 @@ pub struct Demon {
     fused_with_basic_rule: bool,
 }
 
-#[derive(Debug, Clone)]
+impl Demon {
+    pub fn new(name: String, race: Race, lv: u8, fused_with_basic_rule: bool) -> Self {
+        Self {
+            name,
+            race,
+            lv,
+            fused_with_basic_rule,
+        }
+    }
+}
+
+#[derive(Debug, Clone, Getters)]
 pub struct BasicFusionRule {
+    race1: Race,
+    race2: Race,
     result: Race,
-    demon1: Race,
-    demon2: Race,
+}
+
+impl BasicFusionRule {
+    pub fn new(race1: Race, race2: Race, result: Race) -> Self {
+        Self {
+            race1,
+            race2,
+            result,
+        }
+    }
 }
 
 #[derive(Debug, Clone)]
@@ -51,25 +73,24 @@ pub enum Race {
     Mitama,
 }
 
-
-impl Display for Race{
+impl Display for Race {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let race: &str = match self {
             Race::Wargod => "Wargod",
             Race::Raptor => "Raptor",
-            Race::Fairy=> "Fairy",
-            Race::Deity =>"Deity" ,
-            Race::Wilder  => "Wilder",
-            Race::Avian => "Avian" ,
-            Race::Femme =>"Femme",
+            Race::Fairy => "Fairy",
+            Race::Deity => "Deity",
+            Race::Wilder => "Wilder",
+            Race::Avian => "Avian",
+            Race::Femme => "Femme",
             Race::Jirae => "Jirae",
             Race::Holy => "Holy",
-            Race::Haunt =>"Haunt",
+            Race::Haunt => "Haunt",
             Race::Entity => "Entity",
             Race::Fiend => "Fiend",
             Race::Tyrant => "Tyrant",
             Race::Divine => "Divine",
-            Race::Night =>"Night",
+            Race::Night => "Night",
             Race::Element => "Element",
             Race::Avatar => "Avatar",
             Race::Kishin => "Kishin",
