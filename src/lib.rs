@@ -21,7 +21,7 @@ fn produce_race_map(raw_turtle_race: String) -> Result<HashMap<String, String>, 
         let subject = triple.subject;
         let predicate = triple.predicate;
         let object = triple.object;
-        
+
         if let rio_api::model::Subject::NamedNode(name_node) = subject {
             let race_parsing_entry = race_parsing_map.get_mut(name_node.iri);
 
@@ -60,4 +60,9 @@ impl ParseRace {
         race.class_defined = true;
         race
     }
+}
+
+mod RDF_VOCAB {
+    pub const RDF_TYPE_IRI: &'static str = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type";
+    pub const SCHEMA_NAME_PREDICATE_IRI: &'static str = "https://schema.org/name";
 }
