@@ -1,3 +1,21 @@
+/*
+Knowledge Base: Demon Fusion System
+
+This knowledge base models demons from the video game *Shin Megami Tensei: Nocturne* 
+and their fusion rules. Each demon has a name, race, base level, 
+and an indicator of whether special fusion is required.
+*/
+
+/**
+ * demon(Name, Race, BaseLv, SpecialFusion)
+ *
+ * Describes a demon.
+ *
+ * @param Name          The name of the demon.
+ * @param Race          The race or category of the demon.
+ * @param BaseLv        The base level of the demon.
+ * @param SpecialFusion Whether the demon requires special fusion.
+ */
 demon('Zouchou', 'Kishin', 27, false).
 demon('Zhen', 'Wilder', 6, false).
 demon('Yurlungur', 'Snake', 66, false).
@@ -182,6 +200,16 @@ demon('Albion', 'Entity', 64, true).
 demon('Aeros', 'Element', 11, false).
 demon('Aciel', 'Tyrant', 77, true).
 demon('Abaddon', 'Tyrant', 69, false).
+
+/**
+ * fuse_race(Race1, Race2, Result)
+ *
+ * Describes the fusion of two races.
+ *
+ * @param Race1  The first race.
+ * @param Race2  The second race.
+ * @param Result The resulting race after fusion.
+ */
 fuse_race('Haunt', 'Night', 'Yoma').
 fuse_race('Genma', 'Wilder', 'Yoma').
 fuse_race('Genma', 'Vile', 'Yoma').

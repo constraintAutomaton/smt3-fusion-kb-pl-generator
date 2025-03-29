@@ -20,7 +20,7 @@ fn generate_a_prolog_fact(solution_map: QuerySolution) -> Result<String, Error> 
     let name = solution_map.get("name");
     let race = solution_map.get("race");
     let lv = solution_map.get("level");
-    let cannot_be_fused_with_basic_rules = solution_map.get("cannotBeFusedWithBasicRules");
+    let special_fusion = solution_map.get("specialFusion");
     if name.is_none() {
         Err(ErrorProjectionVariableDoesNotExist {
             variable: "name".to_string(),
@@ -36,31 +36,31 @@ fn generate_a_prolog_fact(solution_map: QuerySolution) -> Result<String, Error> 
             variable: "level".to_string(),
         }
         .into())
-    } else if cannot_be_fused_with_basic_rules.is_none() {
+    } else if special_fusion.is_none() {
         Err(ErrorProjectionVariableDoesNotExist {
-            variable: "cannotBeFusedWithBasicRules".to_string(),
+            variable: "specialFusion".to_string(),
         }
         .into())
     } else {
         let name = literal_string_to_string(name.unwrap(), "name")?.replace("'", "\\'");
         let race = literal_string_to_string(race.unwrap(), "race")?;
         let lv = literal_string_to_string(lv.unwrap(), "level")?;
-        let cannot_be_fused_with_basic_rules = literal_string_to_string(
-            cannot_be_fused_with_basic_rules.unwrap(),
-            "cannotBeFusedWithBasicRules",
+        let special_fusion = literal_string_to_string(
+            special_fusion.unwrap(),
+            "specialFusion",
         )?;
 
-        if cannot_be_fused_with_basic_rules != "true".to_string()
-            && cannot_be_fused_with_basic_rules != "false".to_string()
+        if special_fusion != "true".to_string()
+            && special_fusion != "false".to_string()
         {
             return Err(ErrorSolutionExpectedToBeBoolean {
-                variable: "cannotBeFusedWithBasicRules",
+                variable: "specialFusion",
             }
             .into());
         }
 
         Ok(format!(
-            "demon('{name}', '{race}', {lv}, {cannot_be_fused_with_basic_rules})."
+            "demon('{name}', '{race}', {lv}, {special_fusion})."
         ))
     }
 }
@@ -69,11 +69,11 @@ const GET_DEMON_QUERY: &'static str = "
 PREFIX vocab: <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#>
 PREFIX schema: <https://schema.org/>
 
-SELECT ?name ?race ?level ?cannotBeFusedWithBasicRules WHERE {
+SELECT ?name ?race ?level ?specialFusion WHERE {
     ?demon schema:name ?name;
         vocab:isOfRace ?raceIri;
         vocab:hasBasedLevel ?level;
-        vocab:cannotBeFusedWithBasicRules ?cannotBeFusedWithBasicRules.
+        vocab:specialFusion ?specialFusion.
     
     ?raceIri schema:name ?race .
 }";
@@ -90,7 +90,7 @@ mod generate_a_prolog_fact_test {
                 Variable::new("name")?,
                 Variable::new("race")?,
                 Variable::new("level")?,
-                Variable::new("cannotBeFusedWithBasicRules")?,
+                Variable::new("specialFusion")?,
             ],
             vec![
                 Term::BlankNode(BlankNode::default()).into(),
@@ -118,7 +118,7 @@ mod generate_a_prolog_fact_test {
                 Variable::new("name")?,
                 Variable::new("race")?,
                 Variable::new("level")?,
-                Variable::new("cannotBeFusedWithBasicRules")?,
+                Variable::new("specialFusion")?,
             ],
             vec![
                 Term::Literal(Literal::from("a")).into(),
@@ -146,7 +146,7 @@ mod generate_a_prolog_fact_test {
                 Variable::new("name")?,
                 Variable::new("race")?,
                 Variable::new("level")?,
-                Variable::new("cannotBeFusedWithBasicRules")?,
+                Variable::new("specialFusion")?,
             ],
             vec![
                 Term::Literal(Literal::from("a")).into(),
@@ -168,15 +168,15 @@ mod generate_a_prolog_fact_test {
     }
 
     #[test]
-    fn should_return_an_error_given_the_cannot_be_fused_with_basic_rules_is_not_a_literal(
+    fn should_return_an_error_given_the_special_fusion_is_not_a_literal(
     ) -> Result<(), Error> {
-        let solution_map_cannot_be_fused_with_basic_rules_wrong: QuerySolution =
+        let solution_map_special_fusion_wrong: QuerySolution =
             QuerySolution::from((
                 vec![
                     Variable::new("name")?,
                     Variable::new("race")?,
                     Variable::new("level")?,
-                    Variable::new("cannotBeFusedWithBasicRules")?,
+                    Variable::new("specialFusion")?,
                 ],
                 vec![
                     Term::Literal(Literal::from("a")).into(),
@@ -186,12 +186,12 @@ mod generate_a_prolog_fact_test {
                 ],
             ));
 
-        let res = generate_a_prolog_fact(solution_map_cannot_be_fused_with_basic_rules_wrong);
+        let res = generate_a_prolog_fact(solution_map_special_fusion_wrong);
         assert!(res.is_err());
 
         assert_eq!(
             res.unwrap_err().to_string(),
-            "the value of the variable 'cannotBeFusedWithBasicRules' is not a literal".to_string()
+            "the value of the variable 'specialFusion' is not a literal".to_string()
         );
 
         Ok(())
@@ -203,7 +203,7 @@ mod generate_a_prolog_fact_test {
             vec![
                 Variable::new("race")?,
                 Variable::new("level")?,
-                Variable::new("cannotBeFusedWithBasicRules")?,
+                Variable::new("specialFusion")?,
             ],
             vec![
                 Term::Literal(Literal::from("a")).into(),
@@ -229,7 +229,7 @@ mod generate_a_prolog_fact_test {
             vec![
                 Variable::new("name")?,
                 Variable::new("level")?,
-                Variable::new("cannotBeFusedWithBasicRules")?,
+                Variable::new("specialFusion")?,
             ],
             vec![
                 Term::Literal(Literal::from("a")).into(),
@@ -255,7 +255,7 @@ mod generate_a_prolog_fact_test {
             vec![
                 Variable::new("name")?,
                 Variable::new("race")?,
-                Variable::new("cannotBeFusedWithBasicRules")?,
+                Variable::new("specialFusion")?,
             ],
             vec![
                 Term::Literal(Literal::from("a")).into(),
@@ -276,7 +276,7 @@ mod generate_a_prolog_fact_test {
     }
 
     #[test]
-    fn should_return_an_error_given_the_cannot_be_fused_with_basic_rules_is_not_in_the_solution_map(
+    fn should_return_an_error_given_the_special_fusion_is_not_in_the_solution_map(
     ) -> Result<(), Error> {
         let solution_map: QuerySolution = QuerySolution::from((
             vec![
@@ -296,21 +296,21 @@ mod generate_a_prolog_fact_test {
 
         assert_eq!(
             res.unwrap_err().to_string(),
-            "the variable 'cannotBeFusedWithBasicRules' does not exist in the solution map"
+            "the variable 'specialFusion' does not exist in the solution map"
                 .to_string()
         );
 
         Ok(())
     }
     #[test]
-    fn should_return_an_error_given_cannot_be_fused_with_basic_rules_is_not_a_boolean(
+    fn should_return_an_error_given_special_fusion_is_not_a_boolean(
     ) -> Result<(), Error> {
         let solution_map: QuerySolution = QuerySolution::from((
             vec![
                 Variable::new("name")?,
                 Variable::new("race")?,
                 Variable::new("level")?,
-                Variable::new("cannotBeFusedWithBasicRules")?,
+                Variable::new("specialFusion")?,
             ],
             vec![
                 Term::Literal(Literal::from("a")).into(),
@@ -324,19 +324,19 @@ mod generate_a_prolog_fact_test {
 
         assert!(res.is_err());
 
-        assert_eq!(res.unwrap_err().to_string(), "the value of the variable 'cannotBeFusedWithBasicRules' is not a boolean or a string boolean".to_string());
+        assert_eq!(res.unwrap_err().to_string(), "the value of the variable 'specialFusion' is not a boolean or a string boolean".to_string());
         Ok(())
     }
 
     #[test]
-    fn should_return_a_prolog_fact_given_a_valid_solution_map_with_a_boolean_cannot_be_fused_with_basic_rules(
+    fn should_return_a_prolog_fact_given_a_valid_solution_map_with_a_boolean_special_fusion(
     ) -> Result<(), Error> {
         let solution_map: QuerySolution = QuerySolution::from((
             vec![
                 Variable::new("name")?,
                 Variable::new("race")?,
                 Variable::new("level")?,
-                Variable::new("cannotBeFusedWithBasicRules")?,
+                Variable::new("specialFusion")?,
             ],
             vec![
                 Term::Literal(Literal::from("a")).into(),
@@ -357,14 +357,14 @@ mod generate_a_prolog_fact_test {
     }
 
     #[test]
-    fn should_return_a_prolog_fact_given_a_valid_solution_map_with_a_boolean_string_cannot_be_fused_with_basic_rules(
+    fn should_return_a_prolog_fact_given_a_valid_solution_map_with_a_boolean_string_special_fusion(
     ) -> Result<(), Error> {
         let solution_map: QuerySolution = QuerySolution::from((
             vec![
                 Variable::new("name")?,
                 Variable::new("race")?,
                 Variable::new("level")?,
-                Variable::new("cannotBeFusedWithBasicRules")?,
+                Variable::new("specialFusion")?,
             ],
             vec![
                 Term::Literal(Literal::from("a")).into(),
