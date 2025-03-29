@@ -4,6 +4,7 @@ use anyhow::Error;
 use oxigraph::sparql::QuerySolution;
 use std::path::PathBuf;
 
+/// create a prolog knowledge based containing information about Shin Megami Tensei Nocture demons based on RDF files.
 pub fn create_prolog_demon_knowledge_base(
     demon_file_path: &PathBuf,
     race_file_path: &PathBuf,

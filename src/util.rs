@@ -10,6 +10,7 @@ use std::fs;
 use std::io;
 use std::path::PathBuf;
 
+/// Perform a query over a set of RDF file.
 pub(crate) fn query_files(files: Vec<&PathBuf>, query: &'static str) -> Result<QueryResults, Error> {
     let store = Store::new()?;
 
@@ -39,6 +40,7 @@ pub(crate) fn query_files(files: Vec<&PathBuf>, query: &'static str) -> Result<Q
     Ok(query_result)
 }
 
+/// Create a prolog knowledge base using RDF files, a query and a function to generate fact using the bingings of the query.
 pub (crate) fn create_prolog_knowledge_base(
     files: Vec<&PathBuf>,
     query: &'static str,
