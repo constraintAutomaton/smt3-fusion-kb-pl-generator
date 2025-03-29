@@ -41,7 +41,7 @@ fn generate_a_prolog_fact(solution_map: QuerySolution) -> Result<String, Error> 
         let race2 = literal_string_to_string(race2.unwrap(), "race2")?;
         let race_r = literal_string_to_string(race_r.unwrap(), "raceR")?;
 
-        Ok(format!("fuse_race({race1}, {race2}, {race_r})."))
+        Ok(format!("fuse_race('{race1}', '{race2}', '{race_r}')."))
     }
 }
 
@@ -233,7 +233,7 @@ mod generate_a_prolog_fact_test {
 
         let res = generate_a_prolog_fact(solution_map)?;
 
-        assert_eq!(res, "fuse_race(a, b, c).".to_string());
+        assert_eq!(res, "fuse_race('a', 'b', 'c').".to_string());
         Ok(())
     }
 }
@@ -295,8 +295,8 @@ mod create_prolog_knowledge_base_test {
         let race_file_path = PathBuf::from("./test_files/test_valid_race.ttl");
 
         let expected_knowledge_base: HashSet<String> = vec![
-            "fuse_race(beast, deity, avatar).".to_string(),
-            "fuse_race(beast, fury, avatar).".to_string(),
+            "fuse_race('Beast', 'Deity', 'Avatar').".to_string(),
+            "fuse_race('Beast', 'Fury', 'Avatar').".to_string(),
         ]
         .into_iter()
         .collect();

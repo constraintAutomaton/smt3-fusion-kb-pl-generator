@@ -1,542 +1,542 @@
-demon('zouchou', kishin, 27, false).
-demon('zhen', wilder, 6, false).
-demon('yurlungur', snake, 66, false).
-demon('yatagarasu', avatar, 46, false).
-demon('yaksini', femme, 43, false).
-demon('yaka', haunt, 17, false).
-demon('wu kong', fury, 54, true).
-demon('willo\'wisp', foul, 1, false).
-demon('white rider', fiend, 52, true).
-demon('vishnu', deity, 93, false).
-demon('virtue', divine, 41, false).
-demon('valkyrie', wargod, 33, true).
-demon('uzume', megami, 18, false).
-demon('uriel', seraph, 73, true).
-demon('unicorn', holy, 21, false).
-demon('trumpeter', fiend, 77, true).
-demon('troll', fairy, 38, false).
-demon('titania', fairy, 57, false).
-demon('titan', jirae, 49, false).
-demon('throne', divine, 64, false).
-demon('thor', kishin, 76, false).
-demon('the harlot', fiend, 69, true).
-demon('taraka', femme, 20, false).
-demon('taotie', vile, 65, false).
-demon('surt', tyrant, 74, false).
-demon('sui-ki', brute, 62, false).
-demon('sudama', jirae, 13, false).
-demon('succubus', night, 37, false).
-demon('sparna', beast, 54, false).
-demon('slime', foul, 6, false).
-demon('skadi', lady, 74, true).
-demon('shiva', fury, 95, true).
-demon('shikome', femme, 32, false).
-demon('shikigami', brute, 4, false).
-demon('shiki-ouji', brute, 54, false).
-demon('shiisaa', holy, 13, false).
-demon('shadow', foul, 52, false).
-demon('setanta', fairy, 43, false).
-demon('senri', holy, 27, true).
-demon('scathach', megami, 64, false).
-demon('sati', megami, 48, false).
-demon('sarutahiko', jirae, 35, false).
-demon('sarasvati', megami, 30, false).
-demon('samael', vile, 73, true).
-demon('saki mitama', mitama, 35, false).
-demon('sakahagi', foul, 45, true).
-demon('red rider', fiend, 55, true).
-demon('raphael', seraph, 84, true).
-demon('rangda', femme, 72, false).
-demon('rakshasa', haunt, 63, false).
-demon('raja naga', snake, 37, true).
-demon('raiju', wilder, 25, false).
-demon('quetzalcoatl', snake, 55, false).
-demon('queen mab', night, 56, true).
-demon('pyro jack', fairy, 19, false).
-demon('purski', yoma, 48, false).
-demon('principality', divine, 28, false).
-demon('preta', haunt, 4, false).
-demon('power', divine, 33, false).
-demon('pixie', fairy, 2, false).
-demon('pisaca', haunt, 28, false).
-demon('phantom', foul, 42, false).
-demon('pazuzu', vile, 45, false).
-demon('parvati', lady, 57, true).
-demon('pale rider', fiend, 63, true).
-demon('ose', fallen, 45, false).
-demon('orthrus', beast, 34, false).
-demon('onkot', yoma, 37, false).
-demon('oni', brute, 25, false).
-demon('ongyo-ki', brute, 81, true).
-demon('okuninushi', kishin, 39, false).
-demon('odin', deity, 65, false).
-demon('oberon', fairy, 46, false).
-demon('nyx', night, 70, false).
-demon('nue', wilder, 31, false).
-demon('nozuchi', snake, 14, false).
-demon('nigi mitama', mitama, 29, false).
-demon('nekomata', beast, 18, false).
-demon('naga', snake, 28, false).
-demon('mou-ryo', foul, 7, false).
-demon('mothman', wilder, 43, false).
-demon('mot', tyrant, 91, false).
-demon('momunofu', brute, 20, false).
-demon('mizuchi', snake, 34, false).
-demon('mithra', deity, 78, false).
-demon('minakata', kishin, 17, false).
-demon('mikazuchi', kishin, 45, false).
-demon('michael', seraph, 90, true).
-demon('metatron', seraph, 95, true).
-demon('matador', fiend, 30, true).
-demon('makami', avatar, 22, true).
-demon('mada', vile, 83, false).
-demon('long', dragon, 44, true).
-demon('loki', tyrant, 52, false).
-demon('loa', night, 53, false).
-demon('lilith', night, 80, true).
-demon('lilim', night, 8, false).
-demon('legion', haunt, 49, false).
-demon('laksmi', megami, 54, false).
-demon('lachesis', femme, 63, false).
-demon('kusi mitama', mitama, 32, false).
-demon('kushinada', lady, 41, false).
-demon('kurama', genma, 38, true).
-demon('koumoku', kishin, 33, false).
-demon('koppa', yoma, 19, false).
-demon('kodama', jirae, 3, false).
-demon('kin-ki', brute, 59, false).
-demon('kikuri-hime', lady, 24, false).
-demon('kelpie', fairy, 26, false).
-demon('karasu', yoma, 28, true).
-demon('kali', lady, 67, false).
-demon('kaiwan', night, 47, false).
-demon('jinn', yoma, 44, false).
-demon('jikoku', kishin, 52, false).
-demon('jack frost', fairy, 7, false).
-demon('isora', yoma, 14, false).
-demon('inugami', beast, 13, false).
-demon('incubus', night, 25, false).
-demon('ikusa', brute, 44, false).
-demon('huapo', jirae, 5, false).
-demon('hresvelgr', wilder, 75, false).
-demon('horus', deity, 38, false).
-demon('high pixie', fairy, 10, true).
-demon('hell biker', fiend, 42, true).
-demon('hanuman', genma, 46, true).
-demon('gurr', raptor, 63, true).
-demon('gui xian', dragon, 24, true).
-demon('gogmagog', jirae, 55, false).
-demon('girimehkala', vile, 58, true).
-demon('garuda', avian, 63, true).
-demon('ganesha', wargod, 58, true).
-demon('gabriel', seraph, 87, true).
-demon('fuu-ki', brute, 66, false).
-demon('futomimi', kishin, 63, false).
-demon('forneus', fallen, 20, false).
-demon('fomor', night, 18, false).
-demon('flauros', fallen, 68, false).
-demon('flaemis', element, 20, false).
-demon('feng huang', holy, 36, false).
-demon('erthys', element, 7, false).
-demon('eligor', fallen, 29, false).
-demon('efreet', yoma, 52, true).
-demon('dominion', divine, 50, false).
-demon('dis', yoma, 23, false).
-demon('dionysus', fury, 44, false).
-demon('decarabia', fallen, 58, false).
-demon('datsue-ba', femme, 7, false).
-demon('dante', fiend, 80, false).
-demon('dakini', femme, 52, false).
-demon('daisoujou', fiend, 37, true).
-demon('cu chulainn', genma, 52, true).
-demon('clotho', femme, 58, false).
-demon('choronzon', haunt, 11, false).
-demon('chimera', holy, 55, false).
-demon('chatterskull', haunt, 20, false).
-demon('cerberus', beast, 61, false).
-demon('cai-zhi', avatar, 26, false).
-demon('blob', foul, 16, false).
-demon('black rider', fiend, 61, true).
-demon('black ooze', foul, 28, false).
-demon('black frost', night, 66, false).
-demon('bishamon', kishin, 72, false).
-demon('bicorn', wilder, 15, false).
-demon('berith', fallen, 37, false).
-demon('beiji-weng', fury, 61, false).
-demon('beelzebub (fly)', tyrant, 95, true).
-demon('beelzebub', tyrant, 84, false).
-demon('barong', avatar, 60, false).
-demon('baphomet', vile, 33, false).
-demon('baihu', holy, 43, false).
-demon('badb catha', beast, 23, false).
-demon('atropos', femme, 67, false).
-demon('atavaka', deity, 47, false).
-demon('archangel', divine, 18, false).
-demon('arahabaki', vile, 30, false).
-demon('ara mitama', mitama, 25, false).
-demon('aquans', element, 15, false).
-demon('apsaras', yoma, 8, false).
-demon('angel', divine, 11, false).
-demon('amaterasu', deity, 56, true).
-demon('albion', entity, 64, true).
-demon('aeros', element, 11, false).
-demon('aciel', tyrant, 77, true).
-demon('abaddon', tyrant, 69, false).
-fuse_race(haunt, night, yoma).
-fuse_race(genma, wilder, yoma).
-fuse_race(genma, vile, yoma).
-fuse_race(genma, tyrant, yoma).
-fuse_race(genma, holy, yoma).
-fuse_race(fiend, genma, yoma).
-fuse_race(fairy, wilder, yoma).
-fuse_race(fairy, snake, yoma).
-fuse_race(fairy, lady, yoma).
-fuse_race(fairy, jirae, yoma).
-fuse_race(fairy, fallen, yoma).
-fuse_race(dragon, raptor, yoma).
-fuse_race(brute, divine, yoma).
-fuse_race(beast, jirae, yoma).
-fuse_race(jirae, tyrant, wilder).
-fuse_race(holy, raptor, wilder).
-fuse_race(fiend, jirae, wilder).
-fuse_race(femme, jirae, wilder).
-fuse_race(femme, foul, wilder).
-fuse_race(fallen, femme, wilder).
-fuse_race(brute, foul, wilder).
-fuse_race(beast, raptor, wilder).
-fuse_race(beast, haunt, wilder).
-fuse_race(beast, foul, wilder).
-fuse_race(avatar, raptor, wilder).
-fuse_race(raptor, wilder, vile).
-fuse_race(night, raptor, vile).
-fuse_race(megami, wilder, vile).
-fuse_race(haunt, raptor, vile).
-fuse_race(haunt, lady, vile).
-fuse_race(haunt, jirae, vile).
-fuse_race(fury, seraph, vile).
-fuse_race(fury, lady, vile).
-fuse_race(foul, raptor, vile).
-fuse_race(foul, lady, vile).
-fuse_race(fallen, fury, vile).
-fuse_race(fallen, foul, vile).
-fuse_race(entity, raptor, vile).
-fuse_race(divine, tyrant, vile).
-fuse_race(divine, kishin, vile).
-fuse_race(divine, fiend, vile).
-fuse_race(divine, fallen, vile).
-fuse_race(deity, night, vile).
-fuse_race(megami, raptor, tyrant).
-fuse_race(kishin, raptor, tyrant).
-fuse_race(fury, vile, tyrant).
-fuse_race(fury, raptor, tyrant).
-fuse_race(deity, raptor, tyrant).
-fuse_race(jirae, kishin, snake).
-fuse_race(foul, yoma, snake).
-fuse_race(fairy, night, snake).
-fuse_race(dragon, vile, snake).
-fuse_race(dragon, holy, snake).
-fuse_race(dragon, foul, snake).
-fuse_race(dragon, fallen, snake).
-fuse_race(dragon, fairy, snake).
-fuse_race(divine, yoma, snake).
-fuse_race(divine, night, snake).
-fuse_race(brute, kishin, snake).
-fuse_race(beast, lady, snake).
-fuse_race(beast, dragon, snake).
-fuse_race(avian, fallen, snake).
-fuse_race(avian, divine, snake).
-fuse_race(avatar, beast, snake).
-fuse_race(tyrant, yoma, night).
-fuse_race(tyrant, wilder, night).
-fuse_race(snake, yoma, night).
-fuse_race(snake, wilder, night).
-fuse_race(lady, yoma, night).
-fuse_race(fiend, yoma, night).
-fuse_race(fiend, wilder, night).
-fuse_race(femme, genma, night).
-fuse_race(fallen, wilder, night).
-fuse_race(fallen, kishin, night).
-fuse_race(fallen, haunt, night).
-fuse_race(fairy, vile, night).
-fuse_race(fairy, tyrant, night).
-fuse_race(fairy, haunt, night).
-fuse_race(fairy, fiend, night).
-fuse_race(dragon, femme, night).
-fuse_race(divine, jirae, night).
-fuse_race(deity, fairy, night).
-fuse_race(brute, fairy, night).
-fuse_race(brute, dragon, night).
-fuse_race(beast, tyrant, night).
-fuse_race(beast, fiend, night).
-fuse_race(beast, fallen, night).
-fuse_race(avian, yoma, night).
-fuse_race(avian, fairy, night).
-fuse_race(seraph, yoma, megami).
-fuse_race(genma, seraph, megami).
-fuse_race(genma, kishin, megami).
-fuse_race(fairy, holy, megami).
-fuse_race(entity, yoma, megami).
-fuse_race(entity, fairy, megami).
-fuse_race(divine, seraph, megami).
-fuse_race(divine, lady, megami).
-fuse_race(divine, genma, megami).
-fuse_race(divine, fairy, megami).
-fuse_race(divine, entity, megami).
-fuse_race(divine, dragon, megami).
-fuse_race(deity, yoma, megami).
-fuse_race(deity, holy, megami).
-fuse_race(deity, genma, megami).
-fuse_race(deity, entity, megami).
-fuse_race(deity, divine, megami).
-fuse_race(avian, seraph, megami).
-fuse_race(avian, raptor, megami).
-fuse_race(avian, genma, megami).
-fuse_race(avian, deity, megami).
-fuse_race(avatar, holy, megami).
-fuse_race(avatar, divine, megami).
-fuse_race(avatar, deity, megami).
-fuse_race(night, vile, lady).
-fuse_race(night, tyrant, lady).
-fuse_race(kishin, megami, lady).
-fuse_race(jirae, megami, lady).
-fuse_race(holy, kishin, lady).
-fuse_race(genma, raptor, lady).
-fuse_race(genma, jirae, lady).
-fuse_race(fury, night, lady).
-fuse_race(fury, kishin, lady).
-fuse_race(fury, genma, lady).
-fuse_race(fiend, night, lady).
-fuse_race(femme, tyrant, lady).
-fuse_race(femme, kishin, lady).
-fuse_race(femme, holy, lady).
-fuse_race(femme, fury, lady).
-fuse_race(femme, fiend, lady).
-fuse_race(fallen, wargod, lady).
-fuse_race(fallen, seraph, lady).
-fuse_race(fallen, genma, lady).
-fuse_race(entity, fury, lady).
-fuse_race(entity, femme, lady).
-fuse_race(dragon, wargod, lady).
-fuse_race(dragon, snake, lady).
-fuse_race(dragon, entity, lady).
-fuse_race(deity, femme, lady).
-fuse_race(brute, fury, lady).
-fuse_race(avian, kishin, lady).
-fuse_race(avian, holy, lady).
-fuse_race(avatar, snake, lady).
-fuse_race(vile, wargod, kishin).
-fuse_race(snake, wargod, kishin).
-fuse_race(snake, vile, kishin).
-fuse_race(seraph, wargod, kishin).
-fuse_race(megami, yoma, kishin).
-fuse_race(lady, wargod, kishin).
-fuse_race(lady, raptor, kishin).
-fuse_race(lady, night, kishin).
-fuse_race(jirae, wargod, kishin).
-fuse_race(holy, wargod, kishin).
-fuse_race(holy, snake, kishin).
-fuse_race(fury, snake, kishin).
-fuse_race(fury, holy, kishin).
-fuse_race(femme, snake, kishin).
-fuse_race(femme, lady, kishin).
-fuse_race(entity, holy, kishin).
-fuse_race(entity, fallen, kishin).
-fuse_race(dragon, jirae, kishin).
-fuse_race(deity, wargod, kishin).
-fuse_race(deity, snake, kishin).
-fuse_race(brute, night, kishin).
-fuse_race(brute, deity, kishin).
-fuse_race(avian, wargod, kishin).
-fuse_race(avian, snake, kishin).
-fuse_race(avian, jirae, kishin).
-fuse_race(avian, fury, kishin).
-fuse_race(avian, brute, kishin).
-fuse_race(avatar, jirae, kishin).
-fuse_race(avatar, genma, kishin).
-fuse_race(avatar, femme, kishin).
-fuse_race(avatar, brute, kishin).
-fuse_race(vile, yoma, jirae).
-fuse_race(haunt, yoma, jirae).
-fuse_race(haunt, wilder, jirae).
-fuse_race(femme, night, jirae).
-fuse_race(fallen, yoma, jirae).
-fuse_race(divine, haunt, jirae).
-fuse_race(brute, fallen, jirae).
-fuse_race(beast, wilder, jirae).
-fuse_race(genma, wargod, holy).
-fuse_race(genma, night, holy).
-fuse_race(fury, yoma, holy).
-fuse_race(fairy, yoma, holy).
-fuse_race(fairy, seraph, holy).
-fuse_race(dragon, seraph, holy).
-fuse_race(dragon, genma, holy).
-fuse_race(divine, wargod, holy).
-fuse_race(divine, megami, holy).
-fuse_race(beast, wargod, holy).
-fuse_race(beast, megami, holy).
-fuse_race(beast, kishin, holy).
-fuse_race(beast, entity, holy).
-fuse_race(beast, divine, holy).
-fuse_race(avatar, night, holy).
-fuse_race(avatar, kishin, holy).
-fuse_race(avatar, fury, holy).
-fuse_race(avatar, avian, holy).
-fuse_race(raptor, yoma, haunt).
-fuse_race(lady, wilder, haunt).
-fuse_race(jirae, vile, haunt).
-fuse_race(foul, vile, haunt).
-fuse_race(foul, tyrant, haunt).
-fuse_race(fiend, foul, haunt).
-fuse_race(fallen, night, haunt).
-fuse_race(fairy, raptor, haunt).
-fuse_race(fairy, foul, haunt).
-fuse_race(fairy, femme, haunt).
-fuse_race(brute, vile, haunt).
-fuse_race(brute, tyrant, haunt).
-fuse_race(brute, fiend, haunt).
-fuse_race(tyrant, vile, fury).
-fuse_race(raptor, vile, fury).
-fuse_race(raptor, tyrant, fury).
-fuse_race(megami, vile, fury).
-fuse_race(lady, megami, fury).
-fuse_race(kishin, wargod, fury).
-fuse_race(kishin, lady, fury).
-fuse_race(fiend, vile, fury).
-fuse_race(fiend, raptor, fury).
-fuse_race(fallen, tyrant, fury).
-fuse_race(fallen, lady, fury).
-fuse_race(fallen, fiend, fury).
-fuse_race(entity, wargod, fury).
-fuse_race(entity, snake, fury).
-fuse_race(entity, lady, fury).
-fuse_race(entity, kishin, fury).
-fuse_race(entity, jirae, fury).
-fuse_race(entity, genma, fury).
-fuse_race(dragon, kishin, fury).
-fuse_race(deity, kishin, fury).
-fuse_race(deity, fallen, fury).
-fuse_race(brute, raptor, fury).
-fuse_race(brute, lady, fury).
-fuse_race(brute, entity, fury).
-fuse_race(avian, dragon, fury).
-fuse_race(avatar, lady, fury).
-fuse_race(avatar, entity, fury).
-fuse_race(avatar, dragon, fury).
-fuse_race(vile, wilder, foul).
-fuse_race(raptor, snake, foul).
-fuse_race(jirae, raptor, foul).
-fuse_race(jirae, night, foul).
-fuse_race(haunt, vile, foul).
-fuse_race(haunt, tyrant, foul).
-fuse_race(fiend, haunt, foul).
-fuse_race(femme, raptor, foul).
-fuse_race(femme, haunt, foul).
-fuse_race(fallen, raptor, foul).
-fuse_race(divine, raptor, foul).
-fuse_race(brute, haunt, foul).
-fuse_race(beast, vile, foul).
-fuse_race(beast, femme, foul).
-fuse_race(lady, snake, femme).
-fuse_race(kishin, yoma, femme).
-fuse_race(kishin, snake, femme).
-fuse_race(kishin, night, femme).
-fuse_race(genma, snake, femme).
-fuse_race(genma, lady, femme).
-fuse_race(fury, jirae, femme).
-fuse_race(foul, jirae, femme).
-fuse_race(dragon, night, femme).
-fuse_race(brute, yoma, femme).
-fuse_race(brute, megami, femme).
-fuse_race(brute, holy, femme).
-fuse_race(beast, brute, femme).
-fuse_race(avian, night, femme).
-fuse_race(avian, beast, femme).
-fuse_race(seraph, tyrant, fallen).
-fuse_race(night, snake, fallen).
-fuse_race(night, seraph, fallen).
-fuse_race(megami, night, fallen).
-fuse_race(jirae, snake, fallen).
-fuse_race(haunt, seraph, fallen).
-fuse_race(foul, snake, fallen).
-fuse_race(foul, seraph, fallen).
-fuse_race(fiend, seraph, fallen).
-fuse_race(femme, wilder, fallen).
-fuse_race(fairy, megami, fallen).
-fuse_race(divine, wilder, fallen).
-fuse_race(divine, vile, fallen).
-fuse_race(beast, yoma, fallen).
-fuse_race(megami, snake, fairy).
-fuse_race(holy, night, fairy).
-fuse_race(femme, megami, fairy).
-fuse_race(divine, snake, fairy).
-fuse_race(divine, holy, fairy).
-fuse_race(divine, foul, fairy).
-fuse_race(brute, wilder, fairy).
-fuse_race(brute, jirae, fairy).
-fuse_race(beast, night, fairy).
-fuse_race(beast, genma, fairy).
-fuse_race(seraph, vile, divine).
-fuse_race(night, yoma, divine).
-fuse_race(kishin, seraph, divine).
-fuse_race(holy, yoma, divine).
-fuse_race(holy, seraph, divine).
-fuse_race(holy, megami, divine).
-fuse_race(genma, megami, divine).
-fuse_race(fallen, megami, divine).
-fuse_race(brute, genma, divine).
-fuse_race(beast, fairy, divine).
-fuse_race(avatar, yoma, divine).
-fuse_race(avatar, fallen, divine).
-fuse_race(avatar, fairy, divine).
-fuse_race(megami, wargod, deity).
-fuse_race(megami, seraph, deity).
-fuse_race(lady, seraph, deity).
-fuse_race(fury, wargod, deity).
-fuse_race(fury, tyrant, deity).
-fuse_race(fury, megami, deity).
-fuse_race(fiend, fury, deity).
-fuse_race(entity, seraph, deity).
-fuse_race(entity, megami, deity).
-fuse_race(divine, fury, deity).
-fuse_race(avian, megami, deity).
-fuse_race(avian, entity, deity).
-fuse_race(avatar, wargod, deity).
-fuse_race(avatar, vile, deity).
-fuse_race(avatar, seraph, deity).
-fuse_race(avatar, megami, deity).
-fuse_race(snake, tyrant, brute).
-fuse_race(jirae, wilder, brute).
-fuse_race(haunt, snake, brute).
-fuse_race(foul, night, brute).
-fuse_race(foul, haunt, brute).
-fuse_race(fiend, snake, brute).
-fuse_race(femme, yoma, brute).
-fuse_race(femme, vile, brute).
-fuse_race(fallen, vile, brute).
-fuse_race(fallen, jirae, brute).
-fuse_race(fairy, kishin, brute).
-fuse_race(fairy, fury, brute).
-fuse_race(entity, wilder, brute).
-fuse_race(entity, night, brute).
-fuse_race(entity, haunt, brute).
-fuse_race(entity, foul, brute).
-fuse_race(deity, jirae, brute).
-fuse_race(beast, snake, brute).
-fuse_race(avian, femme, brute).
-fuse_race(wilder, yoma, beast).
-fuse_race(night, wilder, beast).
-fuse_race(jirae, yoma, beast).
-fuse_race(jirae, lady, beast).
-fuse_race(holy, jirae, beast).
-fuse_race(foul, wilder, beast).
-fuse_race(fallen, snake, beast).
-fuse_race(fallen, holy, beast).
-fuse_race(divine, femme, beast).
-fuse_race(brute, snake, beast).
-fuse_race(brute, femme, beast).
-fuse_race(holy, lady, avatar).
-fuse_race(dragon, yoma, avatar).
-fuse_race(dragon, megami, avatar).
-fuse_race(beast, holy, avatar).
-fuse_race(beast, fury, avatar).
-fuse_race(beast, deity, avatar).
+demon('Zouchou', 'Kishin', 27, false).
+demon('Zhen', 'Wilder', 6, false).
+demon('Yurlungur', 'Snake', 66, false).
+demon('Yatagarasu', 'Avatar', 46, false).
+demon('Yaksini', 'Femme', 43, false).
+demon('Yaka', 'Haunt', 17, false).
+demon('Wu Kong', 'Fury', 54, true).
+demon('WillO\'Wisp', 'Foul', 1, false).
+demon('White Rider', 'Fiend', 52, true).
+demon('Vishnu', 'Deity', 93, false).
+demon('Virtue', 'Divine', 41, false).
+demon('Valkyrie', 'Wargod', 33, true).
+demon('Uzume', 'Megami', 18, false).
+demon('Uriel', 'Seraph', 73, true).
+demon('Unicorn', 'Holy', 21, false).
+demon('Trumpeter', 'Fiend', 77, true).
+demon('Troll', 'Fairy', 38, false).
+demon('Titania', 'Fairy', 57, false).
+demon('Titan', 'Jirae', 49, false).
+demon('Throne', 'Divine', 64, false).
+demon('Thor', 'Kishin', 76, false).
+demon('The Harlot', 'Fiend', 69, true).
+demon('Taraka', 'Femme', 20, false).
+demon('TaoTie', 'Vile', 65, false).
+demon('Surt', 'Tyrant', 74, false).
+demon('Sui-Ki', 'Brute', 62, false).
+demon('Sudama', 'Jirae', 13, false).
+demon('Succubus', 'Night', 37, false).
+demon('Sparna', 'Beast', 54, false).
+demon('Slime', 'Foul', 6, false).
+demon('Skadi', 'Lady', 74, true).
+demon('Shiva', 'Fury', 95, true).
+demon('Shikome', 'Femme', 32, false).
+demon('Shikigami', 'Brute', 4, false).
+demon('Shiki-Ouji', 'Brute', 54, false).
+demon('Shiisaa', 'Holy', 13, false).
+demon('Shadow', 'Foul', 52, false).
+demon('Setanta', 'Fairy', 43, false).
+demon('Senri', 'Holy', 27, true).
+demon('Scathach', 'Megami', 64, false).
+demon('Sati', 'Megami', 48, false).
+demon('Sarutahiko', 'Jirae', 35, false).
+demon('Sarasvati', 'Megami', 30, false).
+demon('Samael', 'Vile', 73, true).
+demon('Saki Mitama', 'Mitama', 35, false).
+demon('Sakahagi', 'Foul', 45, true).
+demon('Red Rider', 'Fiend', 55, true).
+demon('Raphael', 'Seraph', 84, true).
+demon('Rangda', 'Femme', 72, false).
+demon('Rakshasa', 'Haunt', 63, false).
+demon('Raja Naga', 'Snake', 37, true).
+demon('Raiju', 'Wilder', 25, false).
+demon('Quetzalcoatl', 'Snake', 55, false).
+demon('Queen Mab', 'Night', 56, true).
+demon('Pyro Jack', 'Fairy', 19, false).
+demon('Purski', 'Yoma', 48, false).
+demon('Principality', 'Divine', 28, false).
+demon('Preta', 'Haunt', 4, false).
+demon('Power', 'Divine', 33, false).
+demon('Pixie', 'Fairy', 2, false).
+demon('Pisaca', 'Haunt', 28, false).
+demon('Phantom', 'Foul', 42, false).
+demon('Pazuzu', 'Vile', 45, false).
+demon('Parvati', 'Lady', 57, true).
+demon('Pale Rider', 'Fiend', 63, true).
+demon('Ose', 'Fallen', 45, false).
+demon('Orthrus', 'Beast', 34, false).
+demon('Onkot', 'Yoma', 37, false).
+demon('Oni', 'Brute', 25, false).
+demon('Ongyo-Ki', 'Brute', 81, true).
+demon('Okuninushi', 'Kishin', 39, false).
+demon('Odin', 'Deity', 65, false).
+demon('Oberon', 'Fairy', 46, false).
+demon('Nyx', 'Night', 70, false).
+demon('Nue', 'Wilder', 31, false).
+demon('Nozuchi', 'Snake', 14, false).
+demon('Nigi Mitama', 'Mitama', 29, false).
+demon('Nekomata', 'Beast', 18, false).
+demon('Naga', 'Snake', 28, false).
+demon('Mou-Ryo', 'Foul', 7, false).
+demon('Mothman', 'Wilder', 43, false).
+demon('Mot', 'Tyrant', 91, false).
+demon('Momunofu', 'Brute', 20, false).
+demon('Mizuchi', 'Snake', 34, false).
+demon('Mithra', 'Deity', 78, false).
+demon('Minakata', 'Kishin', 17, false).
+demon('Mikazuchi', 'Kishin', 45, false).
+demon('Michael', 'Seraph', 90, true).
+demon('Metatron', 'Seraph', 95, true).
+demon('Matador', 'Fiend', 30, true).
+demon('Makami', 'Avatar', 22, true).
+demon('Mada', 'Vile', 83, false).
+demon('Long', 'Dragon', 44, true).
+demon('Loki', 'Tyrant', 52, false).
+demon('Loa', 'Night', 53, false).
+demon('Lilith', 'Night', 80, true).
+demon('Lilim', 'Night', 8, false).
+demon('Legion', 'Haunt', 49, false).
+demon('Laksmi', 'Megami', 54, false).
+demon('Lachesis', 'Femme', 63, false).
+demon('Kusi Mitama', 'Mitama', 32, false).
+demon('Kushinada', 'Lady', 41, false).
+demon('Kurama', 'Genma', 38, true).
+demon('Koumoku', 'Kishin', 33, false).
+demon('Koppa', 'Yoma', 19, false).
+demon('Kodama', 'Jirae', 3, false).
+demon('Kin-Ki', 'Brute', 59, false).
+demon('Kikuri-Hime', 'Lady', 24, false).
+demon('Kelpie', 'Fairy', 26, false).
+demon('Karasu', 'Yoma', 28, true).
+demon('Kali', 'Lady', 67, false).
+demon('Kaiwan', 'Night', 47, false).
+demon('Jinn', 'Yoma', 44, false).
+demon('Jikoku', 'Kishin', 52, false).
+demon('Jack Frost', 'Fairy', 7, false).
+demon('Isora', 'Yoma', 14, false).
+demon('Inugami', 'Beast', 13, false).
+demon('Incubus', 'Night', 25, false).
+demon('Ikusa', 'Brute', 44, false).
+demon('HuaPo', 'Jirae', 5, false).
+demon('Hresvelgr', 'Wilder', 75, false).
+demon('Horus', 'Deity', 38, false).
+demon('High Pixie', 'Fairy', 10, true).
+demon('Hell Biker', 'Fiend', 42, true).
+demon('Hanuman', 'Genma', 46, true).
+demon('Gurr', 'Raptor', 63, true).
+demon('Gui Xian', 'Dragon', 24, true).
+demon('Gogmagog', 'Jirae', 55, false).
+demon('Girimehkala', 'Vile', 58, true).
+demon('Garuda', 'Avian', 63, true).
+demon('Ganesha', 'Wargod', 58, true).
+demon('Gabriel', 'Seraph', 87, true).
+demon('Fuu-Ki', 'Brute', 66, false).
+demon('Futomimi', 'Kishin', 63, false).
+demon('Forneus', 'Fallen', 20, false).
+demon('Fomor', 'Night', 18, false).
+demon('Flauros', 'Fallen', 68, false).
+demon('Flaemis', 'Element', 20, false).
+demon('Feng Huang', 'Holy', 36, false).
+demon('Erthys', 'Element', 7, false).
+demon('Eligor', 'Fallen', 29, false).
+demon('Efreet', 'Yoma', 52, true).
+demon('Dominion', 'Divine', 50, false).
+demon('Dis', 'Yoma', 23, false).
+demon('Dionysus', 'Fury', 44, false).
+demon('Decarabia', 'Fallen', 58, false).
+demon('Datsue-Ba', 'Femme', 7, false).
+demon('Dante', 'Fiend', 80, false).
+demon('Dakini', 'Femme', 52, false).
+demon('Daisoujou', 'Fiend', 37, true).
+demon('Cu Chulainn', 'Genma', 52, true).
+demon('Clotho', 'Femme', 58, false).
+demon('Choronzon', 'Haunt', 11, false).
+demon('Chimera', 'Holy', 55, false).
+demon('Chatterskull', 'Haunt', 20, false).
+demon('Cerberus', 'Beast', 61, false).
+demon('Cai-Zhi', 'Avatar', 26, false).
+demon('Blob', 'Foul', 16, false).
+demon('Black Rider', 'Fiend', 61, true).
+demon('Black Ooze', 'Foul', 28, false).
+demon('Black Frost', 'Night', 66, false).
+demon('Bishamon', 'Kishin', 72, false).
+demon('Bicorn', 'Wilder', 15, false).
+demon('Berith', 'Fallen', 37, false).
+demon('Beiji-Weng', 'Fury', 61, false).
+demon('Beelzebub (Fly)', 'Tyrant', 95, true).
+demon('Beelzebub', 'Tyrant', 84, false).
+demon('Barong', 'Avatar', 60, false).
+demon('Baphomet', 'Vile', 33, false).
+demon('Baihu', 'Holy', 43, false).
+demon('Badb Catha', 'Beast', 23, false).
+demon('Atropos', 'Femme', 67, false).
+demon('Atavaka', 'Deity', 47, false).
+demon('Archangel', 'Divine', 18, false).
+demon('Arahabaki', 'Vile', 30, false).
+demon('Ara Mitama', 'Mitama', 25, false).
+demon('Aquans', 'Element', 15, false).
+demon('Apsaras', 'Yoma', 8, false).
+demon('Angel', 'Divine', 11, false).
+demon('Amaterasu', 'Deity', 56, true).
+demon('Albion', 'Entity', 64, true).
+demon('Aeros', 'Element', 11, false).
+demon('Aciel', 'Tyrant', 77, true).
+demon('Abaddon', 'Tyrant', 69, false).
+fuse_race('Haunt', 'Night', 'Yoma').
+fuse_race('Genma', 'Wilder', 'Yoma').
+fuse_race('Genma', 'Vile', 'Yoma').
+fuse_race('Genma', 'Tyrant', 'Yoma').
+fuse_race('Genma', 'Holy', 'Yoma').
+fuse_race('Fiend', 'Genma', 'Yoma').
+fuse_race('Fairy', 'Wilder', 'Yoma').
+fuse_race('Fairy', 'Snake', 'Yoma').
+fuse_race('Fairy', 'Lady', 'Yoma').
+fuse_race('Fairy', 'Jirae', 'Yoma').
+fuse_race('Fairy', 'Fallen', 'Yoma').
+fuse_race('Dragon', 'Raptor', 'Yoma').
+fuse_race('Brute', 'Divine', 'Yoma').
+fuse_race('Beast', 'Jirae', 'Yoma').
+fuse_race('Jirae', 'Tyrant', 'Wilder').
+fuse_race('Holy', 'Raptor', 'Wilder').
+fuse_race('Fiend', 'Jirae', 'Wilder').
+fuse_race('Femme', 'Jirae', 'Wilder').
+fuse_race('Femme', 'Foul', 'Wilder').
+fuse_race('Fallen', 'Femme', 'Wilder').
+fuse_race('Brute', 'Foul', 'Wilder').
+fuse_race('Beast', 'Raptor', 'Wilder').
+fuse_race('Beast', 'Haunt', 'Wilder').
+fuse_race('Beast', 'Foul', 'Wilder').
+fuse_race('Avatar', 'Raptor', 'Wilder').
+fuse_race('Raptor', 'Wilder', 'Vile').
+fuse_race('Night', 'Raptor', 'Vile').
+fuse_race('Megami', 'Wilder', 'Vile').
+fuse_race('Haunt', 'Raptor', 'Vile').
+fuse_race('Haunt', 'Lady', 'Vile').
+fuse_race('Haunt', 'Jirae', 'Vile').
+fuse_race('Fury', 'Seraph', 'Vile').
+fuse_race('Fury', 'Lady', 'Vile').
+fuse_race('Foul', 'Raptor', 'Vile').
+fuse_race('Foul', 'Lady', 'Vile').
+fuse_race('Fallen', 'Fury', 'Vile').
+fuse_race('Fallen', 'Foul', 'Vile').
+fuse_race('Entity', 'Raptor', 'Vile').
+fuse_race('Divine', 'Tyrant', 'Vile').
+fuse_race('Divine', 'Kishin', 'Vile').
+fuse_race('Divine', 'Fiend', 'Vile').
+fuse_race('Divine', 'Fallen', 'Vile').
+fuse_race('Deity', 'Night', 'Vile').
+fuse_race('Megami', 'Raptor', 'Tyrant').
+fuse_race('Kishin', 'Raptor', 'Tyrant').
+fuse_race('Fury', 'Vile', 'Tyrant').
+fuse_race('Fury', 'Raptor', 'Tyrant').
+fuse_race('Deity', 'Raptor', 'Tyrant').
+fuse_race('Jirae', 'Kishin', 'Snake').
+fuse_race('Foul', 'Yoma', 'Snake').
+fuse_race('Fairy', 'Night', 'Snake').
+fuse_race('Dragon', 'Vile', 'Snake').
+fuse_race('Dragon', 'Holy', 'Snake').
+fuse_race('Dragon', 'Foul', 'Snake').
+fuse_race('Dragon', 'Fallen', 'Snake').
+fuse_race('Dragon', 'Fairy', 'Snake').
+fuse_race('Divine', 'Yoma', 'Snake').
+fuse_race('Divine', 'Night', 'Snake').
+fuse_race('Brute', 'Kishin', 'Snake').
+fuse_race('Beast', 'Lady', 'Snake').
+fuse_race('Beast', 'Dragon', 'Snake').
+fuse_race('Avian', 'Fallen', 'Snake').
+fuse_race('Avian', 'Divine', 'Snake').
+fuse_race('Avatar', 'Beast', 'Snake').
+fuse_race('Tyrant', 'Yoma', 'Night').
+fuse_race('Tyrant', 'Wilder', 'Night').
+fuse_race('Snake', 'Yoma', 'Night').
+fuse_race('Snake', 'Wilder', 'Night').
+fuse_race('Lady', 'Yoma', 'Night').
+fuse_race('Fiend', 'Yoma', 'Night').
+fuse_race('Fiend', 'Wilder', 'Night').
+fuse_race('Femme', 'Genma', 'Night').
+fuse_race('Fallen', 'Wilder', 'Night').
+fuse_race('Fallen', 'Kishin', 'Night').
+fuse_race('Fallen', 'Haunt', 'Night').
+fuse_race('Fairy', 'Vile', 'Night').
+fuse_race('Fairy', 'Tyrant', 'Night').
+fuse_race('Fairy', 'Haunt', 'Night').
+fuse_race('Fairy', 'Fiend', 'Night').
+fuse_race('Dragon', 'Femme', 'Night').
+fuse_race('Divine', 'Jirae', 'Night').
+fuse_race('Deity', 'Fairy', 'Night').
+fuse_race('Brute', 'Fairy', 'Night').
+fuse_race('Brute', 'Dragon', 'Night').
+fuse_race('Beast', 'Tyrant', 'Night').
+fuse_race('Beast', 'Fiend', 'Night').
+fuse_race('Beast', 'Fallen', 'Night').
+fuse_race('Avian', 'Yoma', 'Night').
+fuse_race('Avian', 'Fairy', 'Night').
+fuse_race('Seraph', 'Yoma', 'Megami').
+fuse_race('Genma', 'Seraph', 'Megami').
+fuse_race('Genma', 'Kishin', 'Megami').
+fuse_race('Fairy', 'Holy', 'Megami').
+fuse_race('Entity', 'Yoma', 'Megami').
+fuse_race('Entity', 'Fairy', 'Megami').
+fuse_race('Divine', 'Seraph', 'Megami').
+fuse_race('Divine', 'Lady', 'Megami').
+fuse_race('Divine', 'Genma', 'Megami').
+fuse_race('Divine', 'Fairy', 'Megami').
+fuse_race('Divine', 'Entity', 'Megami').
+fuse_race('Divine', 'Dragon', 'Megami').
+fuse_race('Deity', 'Yoma', 'Megami').
+fuse_race('Deity', 'Holy', 'Megami').
+fuse_race('Deity', 'Genma', 'Megami').
+fuse_race('Deity', 'Entity', 'Megami').
+fuse_race('Deity', 'Divine', 'Megami').
+fuse_race('Avian', 'Seraph', 'Megami').
+fuse_race('Avian', 'Raptor', 'Megami').
+fuse_race('Avian', 'Genma', 'Megami').
+fuse_race('Avian', 'Deity', 'Megami').
+fuse_race('Avatar', 'Holy', 'Megami').
+fuse_race('Avatar', 'Divine', 'Megami').
+fuse_race('Avatar', 'Deity', 'Megami').
+fuse_race('Night', 'Vile', 'Lady').
+fuse_race('Night', 'Tyrant', 'Lady').
+fuse_race('Kishin', 'Megami', 'Lady').
+fuse_race('Jirae', 'Megami', 'Lady').
+fuse_race('Holy', 'Kishin', 'Lady').
+fuse_race('Genma', 'Raptor', 'Lady').
+fuse_race('Genma', 'Jirae', 'Lady').
+fuse_race('Fury', 'Night', 'Lady').
+fuse_race('Fury', 'Kishin', 'Lady').
+fuse_race('Fury', 'Genma', 'Lady').
+fuse_race('Fiend', 'Night', 'Lady').
+fuse_race('Femme', 'Tyrant', 'Lady').
+fuse_race('Femme', 'Kishin', 'Lady').
+fuse_race('Femme', 'Holy', 'Lady').
+fuse_race('Femme', 'Fury', 'Lady').
+fuse_race('Femme', 'Fiend', 'Lady').
+fuse_race('Fallen', 'Wargod', 'Lady').
+fuse_race('Fallen', 'Seraph', 'Lady').
+fuse_race('Fallen', 'Genma', 'Lady').
+fuse_race('Entity', 'Fury', 'Lady').
+fuse_race('Entity', 'Femme', 'Lady').
+fuse_race('Dragon', 'Wargod', 'Lady').
+fuse_race('Dragon', 'Snake', 'Lady').
+fuse_race('Dragon', 'Entity', 'Lady').
+fuse_race('Deity', 'Femme', 'Lady').
+fuse_race('Brute', 'Fury', 'Lady').
+fuse_race('Avian', 'Kishin', 'Lady').
+fuse_race('Avian', 'Holy', 'Lady').
+fuse_race('Avatar', 'Snake', 'Lady').
+fuse_race('Vile', 'Wargod', 'Kishin').
+fuse_race('Snake', 'Wargod', 'Kishin').
+fuse_race('Snake', 'Vile', 'Kishin').
+fuse_race('Seraph', 'Wargod', 'Kishin').
+fuse_race('Megami', 'Yoma', 'Kishin').
+fuse_race('Lady', 'Wargod', 'Kishin').
+fuse_race('Lady', 'Raptor', 'Kishin').
+fuse_race('Lady', 'Night', 'Kishin').
+fuse_race('Jirae', 'Wargod', 'Kishin').
+fuse_race('Holy', 'Wargod', 'Kishin').
+fuse_race('Holy', 'Snake', 'Kishin').
+fuse_race('Fury', 'Snake', 'Kishin').
+fuse_race('Fury', 'Holy', 'Kishin').
+fuse_race('Femme', 'Snake', 'Kishin').
+fuse_race('Femme', 'Lady', 'Kishin').
+fuse_race('Entity', 'Holy', 'Kishin').
+fuse_race('Entity', 'Fallen', 'Kishin').
+fuse_race('Dragon', 'Jirae', 'Kishin').
+fuse_race('Deity', 'Wargod', 'Kishin').
+fuse_race('Deity', 'Snake', 'Kishin').
+fuse_race('Brute', 'Night', 'Kishin').
+fuse_race('Brute', 'Deity', 'Kishin').
+fuse_race('Avian', 'Wargod', 'Kishin').
+fuse_race('Avian', 'Snake', 'Kishin').
+fuse_race('Avian', 'Jirae', 'Kishin').
+fuse_race('Avian', 'Fury', 'Kishin').
+fuse_race('Avian', 'Brute', 'Kishin').
+fuse_race('Avatar', 'Jirae', 'Kishin').
+fuse_race('Avatar', 'Genma', 'Kishin').
+fuse_race('Avatar', 'Femme', 'Kishin').
+fuse_race('Avatar', 'Brute', 'Kishin').
+fuse_race('Vile', 'Yoma', 'Jirae').
+fuse_race('Haunt', 'Yoma', 'Jirae').
+fuse_race('Haunt', 'Wilder', 'Jirae').
+fuse_race('Femme', 'Night', 'Jirae').
+fuse_race('Fallen', 'Yoma', 'Jirae').
+fuse_race('Divine', 'Haunt', 'Jirae').
+fuse_race('Brute', 'Fallen', 'Jirae').
+fuse_race('Beast', 'Wilder', 'Jirae').
+fuse_race('Genma', 'Wargod', 'Holy').
+fuse_race('Genma', 'Night', 'Holy').
+fuse_race('Fury', 'Yoma', 'Holy').
+fuse_race('Fairy', 'Yoma', 'Holy').
+fuse_race('Fairy', 'Seraph', 'Holy').
+fuse_race('Dragon', 'Seraph', 'Holy').
+fuse_race('Dragon', 'Genma', 'Holy').
+fuse_race('Divine', 'Wargod', 'Holy').
+fuse_race('Divine', 'Megami', 'Holy').
+fuse_race('Beast', 'Wargod', 'Holy').
+fuse_race('Beast', 'Megami', 'Holy').
+fuse_race('Beast', 'Kishin', 'Holy').
+fuse_race('Beast', 'Entity', 'Holy').
+fuse_race('Beast', 'Divine', 'Holy').
+fuse_race('Avatar', 'Night', 'Holy').
+fuse_race('Avatar', 'Kishin', 'Holy').
+fuse_race('Avatar', 'Fury', 'Holy').
+fuse_race('Avatar', 'Avian', 'Holy').
+fuse_race('Raptor', 'Yoma', 'Haunt').
+fuse_race('Lady', 'Wilder', 'Haunt').
+fuse_race('Jirae', 'Vile', 'Haunt').
+fuse_race('Foul', 'Vile', 'Haunt').
+fuse_race('Foul', 'Tyrant', 'Haunt').
+fuse_race('Fiend', 'Foul', 'Haunt').
+fuse_race('Fallen', 'Night', 'Haunt').
+fuse_race('Fairy', 'Raptor', 'Haunt').
+fuse_race('Fairy', 'Foul', 'Haunt').
+fuse_race('Fairy', 'Femme', 'Haunt').
+fuse_race('Brute', 'Vile', 'Haunt').
+fuse_race('Brute', 'Tyrant', 'Haunt').
+fuse_race('Brute', 'Fiend', 'Haunt').
+fuse_race('Tyrant', 'Vile', 'Fury').
+fuse_race('Raptor', 'Vile', 'Fury').
+fuse_race('Raptor', 'Tyrant', 'Fury').
+fuse_race('Megami', 'Vile', 'Fury').
+fuse_race('Lady', 'Megami', 'Fury').
+fuse_race('Kishin', 'Wargod', 'Fury').
+fuse_race('Kishin', 'Lady', 'Fury').
+fuse_race('Fiend', 'Vile', 'Fury').
+fuse_race('Fiend', 'Raptor', 'Fury').
+fuse_race('Fallen', 'Tyrant', 'Fury').
+fuse_race('Fallen', 'Lady', 'Fury').
+fuse_race('Fallen', 'Fiend', 'Fury').
+fuse_race('Entity', 'Wargod', 'Fury').
+fuse_race('Entity', 'Snake', 'Fury').
+fuse_race('Entity', 'Lady', 'Fury').
+fuse_race('Entity', 'Kishin', 'Fury').
+fuse_race('Entity', 'Jirae', 'Fury').
+fuse_race('Entity', 'Genma', 'Fury').
+fuse_race('Dragon', 'Kishin', 'Fury').
+fuse_race('Deity', 'Kishin', 'Fury').
+fuse_race('Deity', 'Fallen', 'Fury').
+fuse_race('Brute', 'Raptor', 'Fury').
+fuse_race('Brute', 'Lady', 'Fury').
+fuse_race('Brute', 'Entity', 'Fury').
+fuse_race('Avian', 'Dragon', 'Fury').
+fuse_race('Avatar', 'Lady', 'Fury').
+fuse_race('Avatar', 'Entity', 'Fury').
+fuse_race('Avatar', 'Dragon', 'Fury').
+fuse_race('Vile', 'Wilder', 'Foul').
+fuse_race('Raptor', 'Snake', 'Foul').
+fuse_race('Jirae', 'Raptor', 'Foul').
+fuse_race('Jirae', 'Night', 'Foul').
+fuse_race('Haunt', 'Vile', 'Foul').
+fuse_race('Haunt', 'Tyrant', 'Foul').
+fuse_race('Fiend', 'Haunt', 'Foul').
+fuse_race('Femme', 'Raptor', 'Foul').
+fuse_race('Femme', 'Haunt', 'Foul').
+fuse_race('Fallen', 'Raptor', 'Foul').
+fuse_race('Divine', 'Raptor', 'Foul').
+fuse_race('Brute', 'Haunt', 'Foul').
+fuse_race('Beast', 'Vile', 'Foul').
+fuse_race('Beast', 'Femme', 'Foul').
+fuse_race('Lady', 'Snake', 'Femme').
+fuse_race('Kishin', 'Yoma', 'Femme').
+fuse_race('Kishin', 'Snake', 'Femme').
+fuse_race('Kishin', 'Night', 'Femme').
+fuse_race('Genma', 'Snake', 'Femme').
+fuse_race('Genma', 'Lady', 'Femme').
+fuse_race('Fury', 'Jirae', 'Femme').
+fuse_race('Foul', 'Jirae', 'Femme').
+fuse_race('Dragon', 'Night', 'Femme').
+fuse_race('Brute', 'Yoma', 'Femme').
+fuse_race('Brute', 'Megami', 'Femme').
+fuse_race('Brute', 'Holy', 'Femme').
+fuse_race('Beast', 'Brute', 'Femme').
+fuse_race('Avian', 'Night', 'Femme').
+fuse_race('Avian', 'Beast', 'Femme').
+fuse_race('Seraph', 'Tyrant', 'Fallen').
+fuse_race('Night', 'Snake', 'Fallen').
+fuse_race('Night', 'Seraph', 'Fallen').
+fuse_race('Megami', 'Night', 'Fallen').
+fuse_race('Jirae', 'Snake', 'Fallen').
+fuse_race('Haunt', 'Seraph', 'Fallen').
+fuse_race('Foul', 'Snake', 'Fallen').
+fuse_race('Foul', 'Seraph', 'Fallen').
+fuse_race('Fiend', 'Seraph', 'Fallen').
+fuse_race('Femme', 'Wilder', 'Fallen').
+fuse_race('Fairy', 'Megami', 'Fallen').
+fuse_race('Divine', 'Wilder', 'Fallen').
+fuse_race('Divine', 'Vile', 'Fallen').
+fuse_race('Beast', 'Yoma', 'Fallen').
+fuse_race('Megami', 'Snake', 'Fairy').
+fuse_race('Holy', 'Night', 'Fairy').
+fuse_race('Femme', 'Megami', 'Fairy').
+fuse_race('Divine', 'Snake', 'Fairy').
+fuse_race('Divine', 'Holy', 'Fairy').
+fuse_race('Divine', 'Foul', 'Fairy').
+fuse_race('Brute', 'Wilder', 'Fairy').
+fuse_race('Brute', 'Jirae', 'Fairy').
+fuse_race('Beast', 'Night', 'Fairy').
+fuse_race('Beast', 'Genma', 'Fairy').
+fuse_race('Seraph', 'Vile', 'Divine').
+fuse_race('Night', 'Yoma', 'Divine').
+fuse_race('Kishin', 'Seraph', 'Divine').
+fuse_race('Holy', 'Yoma', 'Divine').
+fuse_race('Holy', 'Seraph', 'Divine').
+fuse_race('Holy', 'Megami', 'Divine').
+fuse_race('Genma', 'Megami', 'Divine').
+fuse_race('Fallen', 'Megami', 'Divine').
+fuse_race('Brute', 'Genma', 'Divine').
+fuse_race('Beast', 'Fairy', 'Divine').
+fuse_race('Avatar', 'Yoma', 'Divine').
+fuse_race('Avatar', 'Fallen', 'Divine').
+fuse_race('Avatar', 'Fairy', 'Divine').
+fuse_race('Megami', 'Wargod', 'Deity').
+fuse_race('Megami', 'Seraph', 'Deity').
+fuse_race('Lady', 'Seraph', 'Deity').
+fuse_race('Fury', 'Wargod', 'Deity').
+fuse_race('Fury', 'Tyrant', 'Deity').
+fuse_race('Fury', 'Megami', 'Deity').
+fuse_race('Fiend', 'Fury', 'Deity').
+fuse_race('Entity', 'Seraph', 'Deity').
+fuse_race('Entity', 'Megami', 'Deity').
+fuse_race('Divine', 'Fury', 'Deity').
+fuse_race('Avian', 'Megami', 'Deity').
+fuse_race('Avian', 'Entity', 'Deity').
+fuse_race('Avatar', 'Wargod', 'Deity').
+fuse_race('Avatar', 'Vile', 'Deity').
+fuse_race('Avatar', 'Seraph', 'Deity').
+fuse_race('Avatar', 'Megami', 'Deity').
+fuse_race('Snake', 'Tyrant', 'Brute').
+fuse_race('Jirae', 'Wilder', 'Brute').
+fuse_race('Haunt', 'Snake', 'Brute').
+fuse_race('Foul', 'Night', 'Brute').
+fuse_race('Foul', 'Haunt', 'Brute').
+fuse_race('Fiend', 'Snake', 'Brute').
+fuse_race('Femme', 'Yoma', 'Brute').
+fuse_race('Femme', 'Vile', 'Brute').
+fuse_race('Fallen', 'Vile', 'Brute').
+fuse_race('Fallen', 'Jirae', 'Brute').
+fuse_race('Fairy', 'Kishin', 'Brute').
+fuse_race('Fairy', 'Fury', 'Brute').
+fuse_race('Entity', 'Wilder', 'Brute').
+fuse_race('Entity', 'Night', 'Brute').
+fuse_race('Entity', 'Haunt', 'Brute').
+fuse_race('Entity', 'Foul', 'Brute').
+fuse_race('Deity', 'Jirae', 'Brute').
+fuse_race('Beast', 'Snake', 'Brute').
+fuse_race('Avian', 'Femme', 'Brute').
+fuse_race('Wilder', 'Yoma', 'Beast').
+fuse_race('Night', 'Wilder', 'Beast').
+fuse_race('Jirae', 'Yoma', 'Beast').
+fuse_race('Jirae', 'Lady', 'Beast').
+fuse_race('Holy', 'Jirae', 'Beast').
+fuse_race('Foul', 'Wilder', 'Beast').
+fuse_race('Fallen', 'Snake', 'Beast').
+fuse_race('Fallen', 'Holy', 'Beast').
+fuse_race('Divine', 'Femme', 'Beast').
+fuse_race('Brute', 'Snake', 'Beast').
+fuse_race('Brute', 'Femme', 'Beast').
+fuse_race('Holy', 'Lady', 'Avatar').
+fuse_race('Dragon', 'Yoma', 'Avatar').
+fuse_race('Dragon', 'Megami', 'Avatar').
+fuse_race('Beast', 'Holy', 'Avatar').
+fuse_race('Beast', 'Fury', 'Avatar').
+fuse_race('Beast', 'Deity', 'Avatar').

@@ -60,7 +60,7 @@ fn generate_a_prolog_fact(solution_map: QuerySolution) -> Result<String, Error> 
         }
 
         Ok(format!(
-            "demon('{name}', {race}, {lv}, {cannot_be_fused_with_basic_rules})."
+            "demon('{name}', '{race}', {lv}, {cannot_be_fused_with_basic_rules})."
         ))
     }
 }
@@ -352,7 +352,7 @@ mod generate_a_prolog_fact_test {
 
         let res = generate_a_prolog_fact(solution_map)?;
 
-        assert_eq!(res, "demon('a', b, c, false).".to_string());
+        assert_eq!(res, "demon('a', 'b', c, false).".to_string());
         Ok(())
     }
 
@@ -376,7 +376,7 @@ mod generate_a_prolog_fact_test {
 
         let res = generate_a_prolog_fact(solution_map)?;
 
-        assert_eq!(res, "demon('a', b, c, true).".to_string());
+        assert_eq!(res, "demon('a', 'b', c, true).".to_string());
         Ok(())
     }
 }
@@ -438,8 +438,8 @@ mod create_prolog_knowledge_base_test {
         let race_file_path = PathBuf::from("./test_files/test_valid_race.ttl");
 
         let expected_knowledge_base: HashSet<String> = vec![
-            "demon('abaddon', tyrant, 69, false).".to_string(),
-            "demon('aeros', element, 11, false).".to_string(),
+            "demon('Abaddon', 'Tyrant', 69, false).".to_string(),
+            "demon('Aeros', 'Element', 11, false).".to_string(),
         ]
         .into_iter()
         .collect();

@@ -64,7 +64,7 @@ pub(crate) fn literal_string_to_string(
     variable: &'static str,
 ) -> Result<String, ErrorSolutionExpectedToBeString> {
     if let Term::Literal(literal) = term {
-        Ok(literal.value().to_string().to_lowercase())
+        Ok(literal.value().to_string())
     } else {
         Err(ErrorSolutionExpectedToBeString { variable })
     }
