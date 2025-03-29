@@ -1,0 +1,11 @@
+<https://constraintautomaton.github.io/smt-nocture-db-to-rdf/demon.ttl#Abaddon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#DemonSmt3> ;
+	<https://schema.org/name> "Abaddon" ;
+	<https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#isOfRace> <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/race.ttl#Tyrant> ;
+	<https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#hasBasedLevel> "69"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+	<https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#cannotBeFusedWithBasicRules> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+	
+<https://constraintautomaton.github.io/smt-nocture-db-to-rdf/demon.ttl#Aeros> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#DemonSmt3> ;
+	<https://schema.org/name> "Aeros" ;
+	<https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#isOfRace> <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/race.ttl#Element> ;
+	<https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#hasBasedLevel> "11"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+	<https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#cannotBeFusedWithBasicRules> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .

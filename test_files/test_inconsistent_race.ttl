@@ -1,0 +1,2 @@
+<https://constraintautomaton.github.io/smt-nocture-db-to-rdf/race.ttl#Tyrant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#Race> ;
+	<https://schema.org/name> <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/race.ttl#Tyrant> .
