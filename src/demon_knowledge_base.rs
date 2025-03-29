@@ -1,45 +1,18 @@
 use crate::error::*;
+use crate::util::*;
 use anyhow::Error;
-use oxigraph::io::RdfSyntaxError;
-use oxigraph::model::*;
-use oxigraph::sparql::{QueryResults, QuerySolution};
-use oxigraph::store::Store;
-use oxrdfio::{RdfFormat, RdfParser};
-use std::fs;
+use oxigraph::sparql::QuerySolution;
 use std::path::PathBuf;
 
-pub fn create_prolog_knowledge_base(
-    demon_file_path: PathBuf,
-    race_file_path: PathBuf,
+pub fn create_prolog_demon_knowledge_base(
+    demon_file_path: &PathBuf,
+    race_file_path: &PathBuf,
 ) -> Result<Vec<String>, Error> {
-    let mut prolog_knowledge_base: Vec<String> = Vec::new();
-    let store = Store::new()?;
-
-    let demon_triple_string = fs::read_to_string(demon_file_path)?;
-    let race_triple_string = fs::read_to_string(race_file_path)?;
-
-    let triples = format!("{demon_triple_string}\n{race_triple_string}");
-
-    let turtle_parser = RdfParser::from_format(RdfFormat::Turtle);
-
-    let quads: Vec<Result<Quad, RdfSyntaxError>> =
-        turtle_parser.for_slice(triples.as_bytes()).collect();
-
-    for quad_restults in quads {
-        let quad = quad_restults?;
-        let _ = store.insert(&quad)?;
-    }
-
-    let query_result = store.query(GET_DEMON_QUERY)?;
-
-    if let QueryResults::Solutions(solution_maps) = query_result {
-        for result_solution_map in solution_maps {
-            let solution_map = result_solution_map?;
-            let prolog_fact = generate_a_prolog_fact(solution_map)?;
-            prolog_knowledge_base.push(prolog_fact);
-        }
-    }
-
+    let prolog_knowledge_base = create_prolog_knowledge_base(
+        vec![demon_file_path, race_file_path],
+        GET_DEMON_QUERY,
+        generate_a_prolog_fact,
+    )?;
     Ok(prolog_knowledge_base)
 }
 
@@ -69,7 +42,7 @@ fn generate_a_prolog_fact(solution_map: QuerySolution) -> Result<String, Error> 
         }
         .into())
     } else {
-        let name = literal_string_to_string(name.unwrap(), "name")?;
+        let name = literal_string_to_string(name.unwrap(), "name")?.replace("'", "\\'");
         let race = literal_string_to_string(race.unwrap(), "race")?;
         let lv = literal_string_to_string(lv.unwrap(), "level")?;
         let cannot_be_fused_with_basic_rules = literal_string_to_string(
@@ -86,20 +59,9 @@ fn generate_a_prolog_fact(solution_map: QuerySolution) -> Result<String, Error> 
             .into());
         }
 
-        return Ok(format!(
-            "demon({name}, {race}, {lv}, {cannot_be_fused_with_basic_rules})."
-        ));
-    }
-}
-
-fn literal_string_to_string(
-    term: &Term,
-    variable: &'static str,
-) -> Result<String, ErrorSolutionExpectedToBeString> {
-    if let Term::Literal(literal) = term {
-        Ok(literal.value().to_string().to_lowercase())
-    } else {
-        Err(ErrorSolutionExpectedToBeString { variable })
+        Ok(format!(
+            "demon('{name}', {race}, {lv}, {cannot_be_fused_with_basic_rules})."
+        ))
     }
 }
 
@@ -117,38 +79,9 @@ SELECT ?name ?race ?level ?cannotBeFusedWithBasicRules WHERE {
 }";
 
 #[cfg(test)]
-mod literal_string_to_string_test {
-    use super::*;
-
-    #[test]
-    fn should_return_an_error_if_the_term_is_not_a_literal() -> Result<(), Error> {
-        let a_blank_node: BlankNode = BlankNode::default();
-        let a_named_node: NamedNode = NamedNode::new("http:example.com")?;
-        let terms: Vec<Term> = vec![Term::BlankNode(a_blank_node), Term::NamedNode(a_named_node)];
-        for term in terms {
-            let res = literal_string_to_string(&term, "boo");
-            assert!(res.is_err());
-            let error = res.unwrap_err();
-            assert_eq!(error.variable, "boo");
-        }
-        Ok(())
-    }
-
-    #[test]
-    fn should_return_a_string_of_a_literal() -> Result<(), Error> {
-        let a_literal: Literal = Literal::from("bar");
-
-        let res = literal_string_to_string(&Term::Literal(a_literal), "foo")?;
-
-        assert_eq!(res, "bar".to_string());
-
-        Ok(())
-    }
-}
-
-#[cfg(test)]
 mod generate_a_prolog_fact_test {
     use super::*;
+    use oxigraph::model::*;
 
     #[test]
     fn should_return_an_error_given_the_name_is_not_a_literal() -> Result<(), Error> {
@@ -419,7 +352,7 @@ mod generate_a_prolog_fact_test {
 
         let res = generate_a_prolog_fact(solution_map)?;
 
-        assert_eq!(res, "demon(a, b, c, false).".to_string());
+        assert_eq!(res, "demon('a', b, c, false).".to_string());
         Ok(())
     }
 
@@ -443,13 +376,15 @@ mod generate_a_prolog_fact_test {
 
         let res = generate_a_prolog_fact(solution_map)?;
 
-        assert_eq!(res, "demon(a, b, c, true).".to_string());
+        assert_eq!(res, "demon('a', b, c, true).".to_string());
         Ok(())
     }
 }
 
 #[cfg(test)]
 mod create_prolog_knowledge_base_test {
+    use oxrdfio::RdfSyntaxError;
+
     use super::*;
     use std::collections::HashSet;
     use std::io;
@@ -459,7 +394,7 @@ mod create_prolog_knowledge_base_test {
         let demon_file_path = PathBuf::from("./");
         let race_file_path = PathBuf::from("./test_files/test_valid_race.ttl");
 
-        let resp = create_prolog_knowledge_base(demon_file_path, race_file_path);
+        let resp = create_prolog_demon_knowledge_base(&demon_file_path, &race_file_path);
 
         assert!(resp.is_err());
         assert!(resp.unwrap_err().is::<io::Error>())
@@ -470,7 +405,7 @@ mod create_prolog_knowledge_base_test {
         let demon_file_path = PathBuf::from("./test_files/test_valid_demon.ttl");
         let race_file_path = PathBuf::from("./");
 
-        let resp = create_prolog_knowledge_base(demon_file_path, race_file_path);
+        let resp = create_prolog_demon_knowledge_base(&demon_file_path, &race_file_path);
 
         assert!(resp.is_err());
         assert!(resp.unwrap_err().is::<io::Error>())
@@ -481,7 +416,7 @@ mod create_prolog_knowledge_base_test {
         let demon_file_path = PathBuf::from("./test_files/test_invalid_demon.ttl");
         let race_file_path = PathBuf::from("./test_files/test_valid_race.ttl");
 
-        let resp = create_prolog_knowledge_base(demon_file_path, race_file_path);
+        let resp = create_prolog_demon_knowledge_base(&demon_file_path, &race_file_path);
 
         assert!(resp.is_err());
         assert!(resp.unwrap_err().is::<RdfSyntaxError>())
@@ -492,7 +427,7 @@ mod create_prolog_knowledge_base_test {
         let demon_file_path = PathBuf::from("./test_files/test_valid_demon.ttl");
         let race_file_path = PathBuf::from("./test_files/test_inconsistent_race.ttl");
 
-        let resp = create_prolog_knowledge_base(demon_file_path, race_file_path);
+        let resp = create_prolog_demon_knowledge_base(&demon_file_path, &race_file_path);
 
         assert!(resp.is_err());
     }
@@ -503,13 +438,13 @@ mod create_prolog_knowledge_base_test {
         let race_file_path = PathBuf::from("./test_files/test_valid_race.ttl");
 
         let expected_knowledge_base: HashSet<String> = vec![
-            "demon(abaddon, tyrant, 69, false).".to_string(),
-            "demon(aeros, element, 11, false).".to_string(),
+            "demon('abaddon', tyrant, 69, false).".to_string(),
+            "demon('aeros', element, 11, false).".to_string(),
         ]
         .into_iter()
         .collect();
 
-        let resp = create_prolog_knowledge_base(demon_file_path, race_file_path)?;
+        let resp = create_prolog_demon_knowledge_base(&demon_file_path, &race_file_path)?;
 
         assert_eq!(
             resp.into_iter().collect::<HashSet<String>>(),

@@ -1,0 +1,6 @@
+_:Beast_Deity <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#withRace1> <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/race.ttl#Beast> ;
+	<https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#withRace2> <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/race.ttl#Deity> ;
+	<https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#fusionRaceResult> <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/race.ttl#Avatar> .
+_:Beast_Fury <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#withRace1> <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/race.ttl#Beast> ;
+	<https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#withRace2> <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/race.ttl#Fury> ;
+	<https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#fusionRaceResult> <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/race.ttl#Avatar> .

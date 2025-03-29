@@ -11,4 +11,8 @@ pub(crate) struct CliArg {
     /// the path of a the race turtle file
     #[argh(option, short = 'r')]
     pub race_rdf_file_path: PathBuf,
+
+    /// the path of a the fusion rule turtle file
+    #[argh(option, short = 'f')]
+    pub fusion_rule_rdf_file_path: PathBuf,
 }

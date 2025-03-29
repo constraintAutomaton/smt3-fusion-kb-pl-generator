@@ -1,6 +1,20 @@
 use std;
 
 #[derive(Debug)]
+pub struct ErrorExpectSelectQuery;
+
+impl std::fmt::Display for ErrorExpectSelectQuery {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(
+            f,
+            "expect a SELECT SPARQL query"
+        )
+    }
+}
+
+impl std::error::Error for ErrorExpectSelectQuery {}
+
+#[derive(Debug)]
 pub struct ErrorSolutionExpectedToBeBoolean {
     pub variable: &'static str,
 }

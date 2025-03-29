@@ -3,6 +3,30 @@
 ## Dependencies
 - [Rust 2021](https://www.rust-lang.org/)
 
+## Building
+`cargo build -r`
+
+## Generate the prolog knowledge base
+
+```
+Usage: smt-nocturne-fusion-planner -d <demon-rdf-file-path> -r <race-rdf-file-path>
+
+Generate a prolog knowledge base to describe and fuse demon from the game Shin Megami Tensei 3 nocture from RDF turtle files.
+
+Options:
+  -d, --demon-rdf-file-path
+                    the path of a the demon turtle file
+  -r, --race-rdf-file-path
+                    the path of a the race turtle file
+  --help, help      display usage information
+```
+
+`cargo run -r -- -d ./dataset/rdf/demon.ttl -r ./dataset/rdf/race.ttl -f ./dataset/rdf/basic_rules.ttl > ./dataset/prolog/demon.pl`
+
+it will return the knowledge base as a string it can be piped 
+
+The program can also be executed by directly using the binary located at `./target/release/`
+
 ## Model
 
 ## Premilinaries
