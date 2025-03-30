@@ -1,9 +1,9 @@
 # SMT3 Demon Fusion Knowledge Base Generator
 
 This project generates a Prolog knowledge base to describe demons, their fusion, and fusion mechanics for the game **Shin Megami Tensei III: Nocturne**.
-It processes RDF data (located in `./dataset/rdf`) from the [Shin Megami Tensei III: Nocturne RDF Datasets](https://constraintautomaton.github.io/smt-nocture-db-to-rdf/), and generates a Prolog knowledge base.
-The most recent knowledge base can be found at `./dataset/prolog/demon.pl`.
-Fusion rules for demons are defined in `./dataset/prolog/planner.pl`.
+It processes RDF data (located in [`./dataset/rdf`](./dataset/rdf)) from the [Shin Megami Tensei III: Nocturne RDF Datasets](https://constraintautomaton.github.io/smt-nocture-db-to-rdf/), and generates a Prolog knowledge base.
+The most recent knowledge base can be found at [`./dataset/prolog/demon.pl`](./dataset/prolog/demon.pl).
+Fusion rules for demons are defined in [`./dataset/prolog/planner.pl`](./dataset/prolog/planner.pl).
 
 **Note**: This project has been tested exclusively with [Scryer Prolog](https://www.scryer.pl/).
 
@@ -14,7 +14,7 @@ Fusion rules for demons are defined in `./dataset/prolog/planner.pl`.
 ## Building
 `cargo build -r`
 
-## Generate the prolog knowledge base
+## Generate a Prolog Knowledge Base
 
 ```
 Usage: smt-nocturne-fusion-planner -d <demon-rdf-file-path> -r <race-rdf-file-path>
@@ -29,17 +29,22 @@ Options:
   --help, help      display usage information
 ```
 
-`cargo run -r -- -d ./dataset/rdf/demon.ttl -r ./dataset/rdf/race.ttl -f ./dataset/rdf/basic_rules.ttl > ./dataset/prolog/demon.pl`
+### Generate The Knowledge Base of the Repository
 
-it will return the knowledge base as a string it can be piped 
+To generate the Prolog knowledge base, run the following command:
+```zsh
+cargo run -r -- -d ./dataset/rdf/demon.ttl -r ./dataset/rdf/race.ttl -f ./dataset/rdf/basic_rules.ttl > ./dataset/prolog/demon.pl
+```
 
-The program can also be executed by directly using the binary located at `./target/release/`
+This command generates the knowledge base as a string, which can be piped for further processing (as shown in the example above).
+
+Alternatively, you can execute the program directly using the binary located in `./target/release/`
 
 ## Model
 
 ## Premilinaries
 
-Given all SMT3 demons $D$ and all races $R$.
+Given all Shin Megami Tensei III: Nocturne demons $D$ and all races $R$.
 Demons have unique names $n$ so that they can be considered as an ID.
 A demon have a based $lv$.
 A demon can also have special conditions related to its fusion.
