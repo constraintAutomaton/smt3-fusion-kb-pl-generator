@@ -1,3 +1,6 @@
+# This data  is made available under the Open Database License: http://opendatacommons.org/licenses/odbl/1.0/.
+# Any rights in individual contents of the database are licensed under the Database Contents License: http://opendatacommons.org/licenses/dbcl/1.0/
+
 _:Beast_Deity <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#withRace1> <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/race.ttl#Beast> ;
 	<https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#withRace2> <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/race.ttl#Deity> ;
 	<https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#fusionRaceResult> <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/race.ttl#Avatar> .
@@ -1072,3 +1075,4 @@ _:Genma_Wilder <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/voca
 _:Haunt_Night <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#withRace1> <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/race.ttl#Haunt> ;
 	<https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#withRace2> <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/race.ttl#Night> ;
 	<https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#fusionRaceResult> <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/race.ttl#Yoma> .
+utomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#fusionRaceResult> <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/race.ttl#Yoma> .
