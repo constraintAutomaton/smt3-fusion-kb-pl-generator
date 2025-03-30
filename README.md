@@ -1,4 +1,12 @@
-# smt-nocturne-fusion-planner
+# SMT3 Demon Fusion Knowledge Base Generator
+
+This project generates a Prolog knowledge base to describe demons, their fusion, and fusion mechanics for the game **Shin Megami Tensei III: Nocturne**.
+It processes RDF data (located in `./dataset/rdf`) from the [Shin Megami Tensei III: Nocturne RDF Datasets](https://constraintautomaton.github.io/smt-nocture-db-to-rdf/), and generates a Prolog knowledge base.
+The most recent knowledge base can be found at `./dataset/prolog/demon.pl`.
+Fusion rules for demons are defined in `./dataset/prolog/planner.pl`.
+
+**Note**: This project has been tested exclusively with [Scryer Prolog](https://www.scryer.pl/).
+
 
 ## Dependencies
 - [Rust 2021](https://www.rust-lang.org/)
