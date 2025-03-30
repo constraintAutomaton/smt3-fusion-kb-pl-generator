@@ -46,56 +46,86 @@ Alternatively, you can execute the program directly using the binary located in 
 
 ## Premilinaries
 
-Given all Shin Megami Tensei III: Nocturne demons $D$ and all races $R$.
-Demons have unique names $n$ so that they can be considered as an ID.
-A demon have a based $lv$.
-A demon can also have special conditions related to its fusion.
-The special condition can be realted to to getting the demon $si$ from the set of all
-the conditions $S_{in}$ (including no special condition $s_{empty}$).
-The condition can also related on what what happen when the demon is fused $s_o$ from the pool of all the conditions $S_{out}$ (including no special condition $s_{empty}$).
-A demon is defined by the tuple
+Given all Shin Megami Tensei III: Nocturne demons $D$, including a special demon $d_{\empty}$ representing an invalid or non-existent demon, and all races $R$, including a special race $r_{\empty}$ representing an invalid race.  
+Demons have unique names $n$ that serve as their ID.  
+Each demon has a base level $lv \in \mathbb{R}_{>0}$.  
+Let $s \in \{\text{true}, \text{false}\}$ be a boolean indicating whether the demon must be fused with a special condition, with $s = \text{true}$ meaning the demon requires special fusion, and $s = \text{false}$ meaning it does not.
 
+A demon is defined by the tuple:
 $$
-d := \{r \in R,n, lv\in \mathbb{R}_{>0}, s_{in} \in S_{in}, s_{out} \in S_{out}  \}
+d := (r \in R, n, lv, s)
 $$
+
+We define the following access functions:
+
+- The function
+$$
+r(D) \to R
+$$
+returns the race of a demon.
+
+- The function
+$$
+lv(D) \to \mathbb{R}_{>0}
+$$
+returns the base level of a demon.
+
+- The function
+$$
+s(D) \to \{\text{true}, \text{false}\}
+$$
+returns whether or not a demon requires special fusion, with $s = \text{true}$ indicating special fusion is required, and $s = \text{false}$ indicating it is not.
+
 
 ## Problem
 
-starting with $j$ $d_i$ demons where $j>0 \land j \leq n_d$ where $n_d=12$ is the maximum number of demon in the party.
-We wish to fuse demons to get a specific demon $d_o$ by minimizing the number of fusion operation $n_f$.
-
-## Rules
-
-### Normal fusion
-A normal fusion 
-$$f_d: (D, D) \to D $$
-
-takes two demons $d_i$ and $d_j$ and returns a new demon $d_k$. 
-A normal fusion _can only be performed_ when the demons do not have special conditions when fused $s_{out}$, so when 
+### Normal Fusion
+A normal fusion is defined by:
 $$
-s_{i,out} \in d_{i} = s_{empty} \land s_{j, out} \in d_{j} = s_{empty}
-$$.
-A demon $d_k$ with a special condition to be fused $s_i$ cannot be created with $f_d$, so when 
+f_d: (D, D) \to D
 $$
-s_{i, in} \in d_{k} \ne s_{empty}
-$$.
 
-Given a mapping $F_R: (R, R) \to R$ between two races $(r_i, r_j)$  to a race $r_k$ and a set of every demons 
+It takes two demons $d_i$ and $d_j$ and returns a new demon $d_k$.  
+A normal fusion can only be result in a demon that do not require special fusion, i.e., $s = \text{false}$.
+
+A race mapping is defined by:
 $$
-D_{s_{in} = s_{empty}} = \{D|s_{w,in}=s_{empty} \}
-$$.
-
-In the following lines, we define concretely $f_d$.
-From the race mapping, we get the race $r_k$ of the $d_k$, then
-we calculate the average level $lv_{avg}$ of the input demon.
-Finally, we find the demon of a race $r_k$ with the lowest level where its base level is greater or equal to $lv_{avg}$.
-More formally,   
+f_R: (R, R) \to R
 $$
-r_k = F_R(r_{i},r_{j}) \\
-lv_{avg} = \frac{lv_{i} + lv_{j}}{2} \\
+It describes the resulting race $r_k$ when given input races $r_i$ and $r_j$.
 
-Dp = \{d_w \in D_{s_{in} = s_{empty}} |  r_w = r_k \land lv_w  \geq lv_{avg} \} \\
-ifd = \arg \min{\{ lv_{p} \in d_p \in Dp \}} \\
-
-f_d = Dp_{ifd}
+The set of demons that can be fused via normal fusion is given by:
 $$
+D_{s = \text{false}} = \{ d \in D \mid s(d) = \text{false} \}
+$$
+
+The function $f_d$ is concretely defined as follows:  
+From the set of race mappings $F_r$, we first obtain the resulting race $r_k$ of the resulting demon $d_k$.  
+Next, we calculate the average level $lv_{avg}$ of the input demons:  
+$$ lv_{avg} = \frac{lv_i + lv_j}{2} $$
+
+Next, we find the demon of race $r_k$ with the lowest level such that its level is greater than or equal to $lv_{avg}$:
+$$
+Dp = \{ d_w \in D_{s = \text{false}} \mid r(d_w) = r_k \land lv(D_w) \geq lv_{avg} \}
+$$
+
+Finally, we define $d_r$ as the demon in $Dp$ with the minimum level:
+$$
+d_r = \arg\min_{d \in d_p} lv(d)
+$$
+
+The fusion is unsuccessful and return $d_{\empty}$ if the resulting race $r_r$ is $r_{\empty}$.
+
+### Fusion Planner
+
+Given that a user has $n_d$ demons, where $12$ is the maximum number of demons in a set $D_0$, 
+the user wishes to acquire a specific demon $d_o$.
+
+A demon can be acquired by:
+- Fusion (normal or special)
+- Evolution
+- Purchase from the compendium
+- Recruitment in the field
+
+The problem can be modeled as a state transition problem, where at each step, a demon is acquired via an action $a_i \in A$ where $A$ is all possible actions (defined later), resulting in a new set of demons $D_i$. At the final step, $D_f$, the demon $d_o$ is in this set.
+
