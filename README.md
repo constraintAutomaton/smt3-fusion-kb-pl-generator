@@ -16,7 +16,7 @@ The project generates a Prolog knowledge base, with the most recent version avai
 ## Generate a Prolog Knowledge Base
 
 ```
-Usage: smt-nocturne-fusion-planner -d <demon-rdf-file-path> -r <race-rdf-file-path>
+Usage: smt-nocturne-prolog-kb-generator -d <demon-rdf-file-path> -r <race-rdf-file-path> -f <fusion-rule-rdf-file-path> [--license]
 
 Generate a prolog knowledge base to describe and fuse demon from the game Shin Megami Tensei 3 nocture from RDF turtle files.
 
@@ -25,6 +25,9 @@ Options:
                     the path of a the demon turtle file
   -r, --race-rdf-file-path
                     the path of a the race turtle file
+  -f, --fusion-rule-rdf-file-path
+                    the path of a the fusion rule turtle file
+  --license         print the license
   --help, help      display usage information
 ```
 

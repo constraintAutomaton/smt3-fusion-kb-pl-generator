@@ -921,5 +921,3 @@
 	<https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#isOfRace> <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/race.ttl#Kishin> ;
 	<https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#hasBasedLevel> "27"^^<http://www.w3.org/2001/XMLSchema#integer> ;
 	<https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#specialFusion> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-er> ;
-	<https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#specialFusion> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .

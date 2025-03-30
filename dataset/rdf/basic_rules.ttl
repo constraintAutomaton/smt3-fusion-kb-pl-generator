@@ -1075,4 +1075,3 @@ _:Genma_Wilder <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/voca
 _:Haunt_Night <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#withRace1> <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/race.ttl#Haunt> ;
 	<https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#withRace2> <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/race.ttl#Night> ;
 	<https://constraintautomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#fusionRaceResult> <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/race.ttl#Yoma> .
-utomaton.github.io/smt-nocture-db-to-rdf/vocabulary.ttl#fusionRaceResult> <https://constraintautomaton.github.io/smt-nocture-db-to-rdf/race.ttl#Yoma> .
