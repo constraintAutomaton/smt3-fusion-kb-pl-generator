@@ -128,4 +128,3 @@ A demon can be acquired by:
 - Recruitment in the field
 
 The problem can be modeled as a state transition problem, where at each step, a demon is acquired via an action $a_i \in A$ where $A$ is all possible actions (defined later), resulting in a new set of demons $D_i$. At the final step, $D_f$, the demon $d_o$ is in this set.
-
