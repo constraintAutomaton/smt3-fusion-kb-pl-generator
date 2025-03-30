@@ -47,7 +47,7 @@ fn main() -> Result<(), Error> {
     let fusion_rule_knowledge_base =
         create_prolog_fusion_rule_knowledge_base(&fusion_rule_rdf_file_path, &race_rdf_file_path)?;
 
-    let knowledge_base: Vec<String> = [LICENSE_PROLOG_FILE.to_string(), "".to_string()]
+    let knowledge_base: Vec<String> = [LICENSE_PROLOG_FILE.to_string()]
         .into_iter()
         .chain([DOC_KNOWLEDGE_BASE.to_string(), "".to_string()])
         .into_iter()
