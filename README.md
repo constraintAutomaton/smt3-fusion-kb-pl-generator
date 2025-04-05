@@ -118,13 +118,39 @@ The fusion is unsuccessful and return $d_{\empty}$ if the resulting race $r_r$ i
 
 ### Fusion Planner
 
-Given that a user has $n_d$ demons, where $12$ is the maximum number of demons in a set $D_0$, 
-the user wishes to acquire a specific demon $d_o$.
+Given that a user possesses a set of demons $D_0$ containing $n_d$ demons, where the maximum number of demons in the set is 12, the user aims to acquire a specific demon $d_o$.
 
-A demon can be acquired by:
-- Fusion (normal or special)
-- Evolution
-- Purchase from the compendium
-- Recruitment in the field
+Demons can be acquired through the following methods:
+- Fusion (normal or special) ($f$)
+- Evolution ($e$)
+- Purchase from the compendium ($p$)
+- Recruitment in the field ($r$)
 
-The problem can be modeled as a state transition problem, where at each step, a demon is acquired via an action $a_i \in A$ where $A$ is all possible actions (defined later), resulting in a new set of demons $D_i$. At the final step, $D_f$, the demon $d_o$ is in this set.
+This process can be modeled as a state transition problem, where each step involves acquiring a demon via an action $a_i \in A$, where 
+$$A = \{f, e, p, r\}$$ 
+
+represents all possible actions. This results in a new set of demons $D_i$. The goal is for the final set $D_f$ to contain the desired demon $d_o$.
+
+#### Rules for Validity
+
+A plan is considered valid if:
+1. The desired demon is found in the final set of demons:  
+   $$d_o \in D_i$$  
+2. Or no more actions can be performed, meaning no more fusions are possible:  
+   $$|D_i| = 1$$
+**Consideration for evolution, purchase and recruiting will be consider in an update of the document**
+
+#### Action and State Transition
+
+Let’s define the following:
+- At time $i$, the action $a_i$ is performed, which is a fusion action $f_d$ that combines two demons $d_j$ and $d_k$ from the set $D_{i-1}$ to produce a new demon $d_w$.
+  
+The state transition from $D_{i-1}$ to $D_i$ is given by:
+
+$$ a_i = f_d(d_j \in D_{i-1}, d_k \in D_{i-1}) $$
+
+This results in the new set of demons $D_i$:
+
+$$ D_i = (D_{i-1} \setminus \{ d_j, d_k \}) \cup \{ d_w \} $$
+
+Here, two demons $d_j$ and $d_k$ are removed from the previous set $D_{i-1}$ and replaced by the newly fused demon $d_w$.
