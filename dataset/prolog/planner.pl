@@ -25,8 +25,9 @@ This knowledge base models how to fuse demons and how to plan the fusion of demo
 :- use_module('demon.pl').
 :- use_module(library(clpz)).
 :- use_module(library(lists)).
-:- use_module(library(debug)) .
-
+:- use_module(library(debug)).
+:- use_module(library(pairs)).
+:- use_module(library(dif)).
 /**
  *
  * Describes that fusion of race is symetric.
@@ -89,7 +90,7 @@ plan(D0, demon(NameR, RaceR, LvR, _)) -->
         % two demons have the to be fused
         member(DemonI, D1),
         member(DemonJ, D1),
-        \+(DemonI = DemonJ),
+        dif(DemonI, DemonJ),
         normal_fusion(DemonI, DemonJ, DemonR),
         % the next fusion pool cannot have already fused demons
         select(DemonI, D1, D2),
@@ -98,3 +99,15 @@ plan(D0, demon(NameR, RaceR, LvR, _)) -->
         append(D3, [DemonR], D4) 
     },
     plan(D4, demon(NameR, RaceR, LvR, _)).
+
+/**
+ * Describe the shortest fusion plan.
+ * - The demon set is `D0`.
+ * - The desired demon is `demon(NameR, RaceR, LvR, _)`.
+ * - The actions to execute the plan `A`.
+ */
+shortest_plan(D0, demon(NameR, RaceR, LvR, _), A) :-
+    once((
+        length(A, _),
+        phrase(plan(D0, demon(NameR, RaceR, LvR, _)), A)
+    )).
