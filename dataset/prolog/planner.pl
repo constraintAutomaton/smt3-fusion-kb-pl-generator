@@ -26,6 +26,7 @@ This knowledge base models how to fuse demons and how to plan the fusion of demo
 :- use_module('demon.pl').
 :- use_module(library(clpz)).
 :- use_module(library(lists)).
+:- use_module(library(debug)) .
 
 /**
  *
@@ -47,7 +48,7 @@ normal_fusion(demon(Name1, Race1, Lv1, SpecialFusion1), demon(Name2, Race2, Lv2,
     % find the race of the resulting demon
     race_fusion_symmetry(Race1, Race2, RaceR), 
     % calculate the level of the resulting demon
-    AvgLv #= (Lv1 + Lv2) % 2,
+    AvgLv #= (Lv1 + Lv2) // 2,
     % check if the demon
     min_lv_above_avg(RaceR, AvgLv, LvR),
     % find the resulting demon
@@ -59,3 +60,42 @@ normal_fusion(demon(Name1, Race1, Lv1, SpecialFusion1), demon(Name2, Race2, Lv2,
  * - Its level must be greater or equal than `AvgLv`.
  */
 min_lv_above_avg(Race, AvgLv, MinLv):- findall(Lv, (demon(_, Race, Lv, false), Lv #>= AvgLv), S), list_min(S, MinLv).
+
+/**
+ * A normal fusion step.
+ */
+normal_fusion(_, _).
+
+/**
+ * Describe a fusion plan, where the desired demon is in the demon set D0.
+ * - The demon set is `D0`.
+ * - The desired demon is `demon(NameR, RaceR, LvR, _)`.
+ */
+plan(D0, demon(NameR, RaceR, LvR, _)) --> 
+    [],
+    { 
+        member(demon(NameR, RaceR, LvR, _), D0)
+    }.
+
+/**
+ * Describe a fusion plan.
+ * - The demon set is `D0`.
+ * - The desired demon is `demon(NameR, RaceR, LvR, _)`.
+ */
+plan(D0, demon(NameR, RaceR, LvR, _)) --> 
+    [normal_fusion(DemonI, DemonJ)],
+    {
+        % Make sure there are no duplicate
+        list_to_set(D0, D1),
+        % two demons have the to be fused
+        member(DemonI, D1),
+        member(DemonJ, D1),
+        \+(DemonI = DemonJ),
+        normal_fusion(DemonI, DemonJ, DemonR),
+        % the next fusion pool cannot have already fused demons
+        select(DemonI, D1, D2),
+        select(DemonJ, D2, D3),
+        % the next fusion pool have the fused demon
+        append(D3, [DemonR], D4) 
+    },
+    plan(D4, demon(NameR, RaceR, LvR, _)).
