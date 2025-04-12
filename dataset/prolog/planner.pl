@@ -106,8 +106,8 @@ plan(D0, demon(NameR, RaceR, LvR, _)) -->
  * - The desired demon is `demon(NameR, RaceR, LvR, _)`.
  * - The actions to execute the plan `A`.
  */
-shortest_plan(D0, demon(NameR, RaceR, LvR, _), A) :-
+shortest_plan(D0, demon(NameR, RaceR, LvR, Special), A) :-
     once((
         length(A, _),
-        phrase(plan(D0, demon(NameR, RaceR, LvR, _)), A)
+        phrase(plan(D0, demon(NameR, RaceR, LvR, Special)), A)
     )).
