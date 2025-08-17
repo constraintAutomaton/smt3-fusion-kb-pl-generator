@@ -1,0 +1,3 @@
+[submodule "smt-nocture-db-to-rdf"]
+	path = smt-nocture-db-to-rdf
+	url = https://github.com/constraintAutomaton/smt-nocture-db-to-rdf.git

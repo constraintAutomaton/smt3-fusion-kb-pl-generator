@@ -60,7 +60,7 @@ fn generate_a_prolog_fact(solution_map: QuerySolution) -> Result<String, Error> 
         let race2 = literal_string_to_string(race2.unwrap(), "race2")?;
         let race_r = literal_string_to_string(race_r.unwrap(), "raceR")?;
 
-        Ok(format!("fuse_race('{race1}', '{race2}', '{race_r}')."))
+        Ok(format!("fuse_race(\"{race1}\", \"{race2}\", \"{race_r}\")."))
     }
 }
 

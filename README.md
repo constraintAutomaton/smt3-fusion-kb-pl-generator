@@ -6,12 +6,26 @@ The project generates a Prolog knowledge base, with the most recent version avai
 
 **Note**: This project has been tested exclusively with [Scryer Prolog](https://www.scryer.pl/).
 
+## Cloning the repository
+
+To clone this repository along with its required submodules, use:
+```sh
+git clone --recurse-submodules -j8 <repo-url>
+```
+
+To update submodules after pulling:
+
+```sh
+git pull --recurse-submodules
+```
 
 ## Dependencies
 - [Rust 2021](https://www.rust-lang.org/)
 
 ## Building
-`cargo build -r`
+```sh
+cargo build -r
+```
 
 ## Generate a Prolog Knowledge Base
 
@@ -35,7 +49,7 @@ Options:
 
 To generate the Prolog knowledge base, run the following command:
 ```zsh
-cargo run -r -- -d ./dataset/rdf/demon.ttl -r ./dataset/rdf/race.ttl -f ./dataset/rdf/basic_rules.ttl > ./dataset/prolog/demon.pl
+cargo run -r -- -d ./dataset/rdf/demon.ttl -r ./dataset/rdf/race.ttl -f ./dataset/rdf/normal_fusion_rules.ttl > ./dataset/prolog/demon.pl
 ```
 
 This command generates the knowledge base as a string, which can be piped for further processing (as shown in the example above).

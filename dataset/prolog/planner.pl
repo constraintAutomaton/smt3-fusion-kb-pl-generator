@@ -41,10 +41,10 @@ race_fusion_symmetry(R1, R2, RR) :- fuse_race(R1, R2, RR); fuse_race(R2, R1, RR)
  * - Its base level must be at least the average level of the input demons.
  * - It must be the lowest-level demon in the knowledge base that satisfies these conditions.
  */  
-normal_fusion(demon(Name1, Race1, Lv1, SpecialFusion1), demon(Name2, Race2, Lv2, SpecialFusion2), demon(NameR, RaceR, LvR, false)) :- 
+normal_fusion(demon(Name1, Race1, Lv1), demon(Name2, Race2, Lv2), demon(NameR, RaceR, LvR, false)) :- 
     % Set the demon 1 and the demon 2
-    demon(Name1, Race1, Lv1, SpecialFusion1),
-    demon(Name2, Race2, Lv2, SpecialFusion2),
+    demon(Name1, Race1, Lv1),
+    demon(Name2, Race2, Lv2),
     % find the race of the resulting demon
     race_fusion_symmetry(Race1, Race2, RaceR), 
     % calculate the level of the resulting demon
